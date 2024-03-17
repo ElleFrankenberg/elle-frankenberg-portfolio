@@ -3,31 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --gray: #f0f0f0;
+  --darkGray: #c4c4c4;
+  --black: #1d1d1d;
+  --white: #fff;
+  --main-font-size: 16px;
+  --footer-height: "";
+  --header-height: "";
+  --container-p-mobile: 3rem 0.75rem;
+  --container-p-desktop: 1.25rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "EB Garamond12";
+  src: url("/fonts/EBGaramond12-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+html {
+  font-family: "Satoshi", sans-serif;
+  height: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-size: var(--main-font-size);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+p {
+  font-family: "EB Garamond12", serif;
+}
+
+a {
+  cursor: pointer;
 }
