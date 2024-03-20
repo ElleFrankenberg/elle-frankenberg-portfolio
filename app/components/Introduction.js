@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Introduction = ({
   firstName,
   lastName,
@@ -6,10 +8,12 @@ const Introduction = ({
   description,
   cv,
   socialLinks,
+  profileImage,
 }) => {
   return (
     <header className="">
       <section>
+        <Image src={profileImage} width={200} height={200} />
         <h1>{firstName}</h1>
         <ul>
           <li>githublink</li>
