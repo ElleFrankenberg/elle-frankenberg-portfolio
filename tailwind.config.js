@@ -10,10 +10,11 @@ module.exports = {
       fontSize: {
         xsm: "0.75rem",
         reg: "16px",
-        "reg-serif": "1.1rem",
-        small: "3.5rem",
-        medium: "5rem",
-        lg: "6rem",
+        "reg-serif": "1.3rem",
+        small: "1.75rem",
+        medium: "2rem",
+        lg: "5rem",
+        huge: "7.5rem",
       },
       fontFamily: {
         sans: ["Satoshi"],
@@ -22,6 +23,7 @@ module.exports = {
       colors: {
         white: "#fff",
         black: "#1d1d1d",
+        darkGray: "#565656",
         lightPink: "#FCEDEA",
         darkPink: "#EB5577",
         lightBlue: "#EDFFFF",

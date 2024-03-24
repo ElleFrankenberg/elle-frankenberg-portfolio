@@ -9,8 +9,7 @@ export default async function Home() {
   return (
     <>
       <Introduction
-        firstName={content.firstName}
-        lastName={content.lastName}
+        name={content.name}
         occupationTitle={content.occupationTitle}
         extraWorkTitle={content.extraWorkTitle}
         description={content.description}
