@@ -11,7 +11,7 @@ module.exports = {
         xsm: "0.75rem",
         reg: "16px",
         "reg-serif": "1.3rem",
-        small: "1.75rem",
+        small: "1.25rem",
         medium: "2rem",
         lg: "5rem",
         huge: "7.5rem",

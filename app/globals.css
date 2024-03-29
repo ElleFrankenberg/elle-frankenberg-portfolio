@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "EB Garamond12";
+  src: url("/fonts/EBGaramond12-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
 :root {
   --gray: #f0f0f0;
   --darkGray: #c4c4c4;
@@ -10,28 +31,11 @@
   --main-font-size: 16px;
   --footer-height: "";
   --header-height: "";
-  --container-p-mobile: 3rem 1.5rem;
+  --container-p-mobile: 2rem 1.5rem;
   --container-p-desktop: 1.25rem;
   --mini-gap: 0.5rem;
   --gap-small: 1.5rem;
   --gap-medium: 3rem;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Regular.otf") format("opentype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Satoshi";
-  src: url("/fonts/Satoshi-Bold.otf") format("opentype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "EB Garamond12";
-  src: url("/fonts/EBGaramond12-Regular.otf") format("opentype");
-  font-weight: normal;
 }
 
 html {
@@ -43,10 +47,43 @@ body {
   font-family: "Satoshi", sans-serif;
 }
 
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: normal;
+}
+
 p {
   font-family: "EB Garamond12", serif;
 }
 
 a {
   cursor: pointer;
+}
+
+/* CV list animation */
+
+.cv-list-enter {
+  max-height: 0;
+  transition: max-height 0.7s ease-out;
+  overflow: hidden;
+}
+.cv-list-enter-active {
+  max-height: 100vh;
+  transition: max-height 0.7s ease-in;
+}
+.cv-list-exit {
+  max-height: 100vh;
+  transition: max-height 0.7s ease-in;
+}
+.cv-list-exit-active {
+  max-height: 0;
+  transition: max-height 0.7s ease-out;
+  overflow: hidden;
 }

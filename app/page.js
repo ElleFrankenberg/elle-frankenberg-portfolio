@@ -1,4 +1,4 @@
-import Introduction from "./components/Introduction";
+import Introduction from "./components/introduction/Introduction";
 import { fetchData } from "@/lib/fetchData";
 
 export default async function Home() {
