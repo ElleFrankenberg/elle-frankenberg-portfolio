@@ -25,16 +25,18 @@ const Introduction = ({
             />
           </div>
           <div>
-            <h3 className="text-darkBlue text-small font-bold leading-normal">
-              {name}
-            </h3>
-            <h1 className="text-black text-medium font-bold leading-normal">
-              {occupationTitle}
+            <h1>
+              <span className="block text-darkBlue text-small font-bold leading-normal">
+                {name}
+              </span>
+              <span className="block text-black text-medium font-bold leading-normal">
+                {occupationTitle}
+              </span>
+              <span className="text-darkGray text-[1.5rem] leading-normal">
+                <span>+</span>
+                <span className="ml-[0.3rem]">{extraWorkTitle}</span>
+              </span>
             </h1>
-            <h3 className="text-darkGray text-[1.5rem] leading-normal">
-              <span>+</span>
-              <span className="ml-[0.3rem]">{extraWorkTitle}</span>
-            </h3>
           </div>
         </section>
         <article className="font-serif text-reg-serif pb-[--gap-small]">
