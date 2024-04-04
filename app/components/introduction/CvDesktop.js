@@ -2,25 +2,32 @@
 import { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { FaArrowCircleDown } from "react-icons/fa";
+import Link from "next/link";
+import SocialLinkList from "../lists/SocialLinkList";
 
-const CvFoldOut = ({ cv }) => {
+const CvDesktop = ({ cv, socialLinks }) => {
   console.log(cv);
 
   const [cvIsOpen, setCvIsOpen] = useState(false);
   const nodeRef = useRef(null);
   return (
     <>
-      <div className="pl-[--gap-small]">
-        <button
-          ref={nodeRef}
-          className="bg-darkBlue text-white text-small font-medium leading-normal pr-5 pl-[8px] rounded-[40px] flex items-center"
-          onClick={() => setCvIsOpen(!cvIsOpen)}
-        >
-          <span className="mr-[8px]">
-            <FaArrowCircleDown size="22" />
-          </span>
-          <span>CV</span>
-        </button>
+      <div className="flex lg:hidden">
+        <ul className="flex">
+          <li>
+            <button
+              ref={nodeRef}
+              className="bg-darkBlue text-white text-small font-medium leading-normal pr-5 pl-[8px] rounded-[40px] flex items-center"
+              onClick={() => setCvIsOpen(!cvIsOpen)}
+            >
+              <span className="mr-[8px]">
+                <FaArrowCircleDown size="22" />
+              </span>
+              <span>CV</span>
+            </button>
+          </li>
+          <SocialLinkList socialLinks={socialLinks} />
+        </ul>
       </div>
       <CSSTransition
         in={cvIsOpen}
@@ -30,7 +37,7 @@ const CvFoldOut = ({ cv }) => {
         unmountOnExit
       >
         <section ref={nodeRef}>
-          <section className="p-[--container-p-mobile]">
+          <section className="py-[--gap-small]">
             <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">
               {cv.headlineWork}
             </h2>
@@ -62,7 +69,7 @@ const CvFoldOut = ({ cv }) => {
               ))}
             </ul>
           </section>
-          <section className="p-[--container-p-mobile]">
+          <section className="py-[--gap-small]">
             <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">
               {cv.headlineEducation}
             </h2>
@@ -79,7 +86,7 @@ const CvFoldOut = ({ cv }) => {
                   </div>
                   <div className="md:contents">
                     <h4 className="text-darkGray ">
-                      <span className="font-bold mr-[5px] after:content-[','] md:after:content-[''] md:block md:mr-0">
+                      <span className="font-bold block ">
                         {education.schoolTitle}
                       </span>
                       <span>
@@ -100,4 +107,4 @@ const CvFoldOut = ({ cv }) => {
   );
 };
 
-export default CvFoldOut;
+export default CvDesktop;
