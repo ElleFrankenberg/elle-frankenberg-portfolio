@@ -28,6 +28,7 @@
   --darkGray: #c4c4c4;
   --black: #1d1d1d;
   --white: #fff;
+  --darkPink: #eb5577;
   --main-font-size: 16px;
   --footer-height: "";
   --header-height: "";
@@ -46,6 +47,8 @@ html {
 body {
   font-size: var(--main-font-size);
   font-family: "Satoshi", sans-serif;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 h1 {
@@ -68,9 +71,48 @@ a {
   cursor: pointer;
 }
 
+/* target :nth-child() */
+.tech-list > li:nth-child(3) {
+  background-color: var(--darkPink);
+  color: var(--white);
+  padding: 0 0.5rem;
+}
+
+/* modal */
+
+.popup-overlay {
+  background: rgba(11, 36, 245, 0.5);
+}
+
+.popup-content {
+  position: relative;
+  top: 0rem;
+  bottom: 0rem;
+  margin-top: unset !important;
+  max-width: 100%;
+  width: 100%;
+  pointer-events: auto;
+  padding: 1rem;
+  animation: 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards a;
+  -webkit-animation: 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards a;
+  background-color: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .popup-content {
+    top: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    max-width: 60rem;
+    min-height: unset;
+  }
+}
+
 /* CV list animation */
 
-.cv-list-enter {
+/* .cv-list-enter {
   max-height: 0;
   transition: max-height 0.7s ease-out;
   overflow: hidden;
@@ -87,4 +129,4 @@ a {
   max-height: 0;
   transition: max-height 0.7s ease-out;
   overflow: hidden;
-}
+} */

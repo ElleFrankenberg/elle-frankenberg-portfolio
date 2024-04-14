@@ -16,6 +16,7 @@ export default async function Home() {
         cv={content.cv}
         socialLinks={content.socialLinks}
         profileImage={content.profileImage}
+        tech={content.tech}
       />
       <main>
         <h1>Main content</h1>

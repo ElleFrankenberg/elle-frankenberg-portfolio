@@ -2,8 +2,6 @@
 import { useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import { FaArrowCircleDown } from "react-icons/fa";
-import Link from "next/link";
-import SocialLinkList from "../lists/SocialLinkList";
 
 const CvFoldOut = ({ cv, socialLinks }) => {
   console.log(cv);
@@ -12,7 +10,7 @@ const CvFoldOut = ({ cv, socialLinks }) => {
   const nodeRef = useRef(null);
   return (
     <>
-      <div className="flex lg:hidden">
+      <div className="flex">
         <ul className="flex items-center size-full">
           <li>
             <button
@@ -26,7 +24,6 @@ const CvFoldOut = ({ cv, socialLinks }) => {
               <span>CV</span>
             </button>
           </li>
-          <SocialLinkList socialLinks={socialLinks} />
         </ul>
       </div>
       <CSSTransition
@@ -61,7 +58,7 @@ const CvFoldOut = ({ cv, socialLinks }) => {
                         {job.from} - {job.to}
                       </span>
                     </h4>
-                    <p className="font-serif text-reg-serif mt-[--gap-small] ">
+                    <p className="font-serif text-reg-serif mt-[--gap-small] md:mt-0">
                       {job.jobDescription}
                     </p>
                   </div>

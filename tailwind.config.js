@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontSize: {
         xsm: "0.75rem",
-        reg: "16px",
+        reg: "1rem",
         "reg-serif": "1.3rem",
         small: "1.25rem",
         medium: "2rem",
@@ -30,6 +30,13 @@ module.exports = {
         darkBlue: "#0B24F5",
         lightGray: "#F5F5F5",
         green: "#6DB486",
+      },
+      spacing: {
+        xs: "0.5rem",
+        sm: "1rem",
+        md: "2rem",
+        lg: "3rem",
+        // xl: "24px",
       },
     },
     screens: {
