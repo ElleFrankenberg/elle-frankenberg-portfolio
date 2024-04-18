@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import { FaFileDownload } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import Contact from "./Contact";
+import WorkExperience from "../../lists/WorkExperience";
 
 const CvModal = ({ cv }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -32,7 +33,7 @@ const CvModal = ({ cv }) => {
               className="w-[32px] h-[32px] text-darkBlue ml-auto cursor-pointer"
             />
           </header>
-          <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3">
+          <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3 border-b-2 border-b-darkBlue pb-sm">
             <div className="md:border-r-2 md:border-r-darkBlue md:pr-sm md:col-span-2">
               <h2 className="md:mt-0 font-bold leading-none">
                 <span className="block text-medium text-darkGray">
@@ -42,15 +43,16 @@ const CvModal = ({ cv }) => {
                   {cv.occupationTitle} | {cv.extraWorkTitle}
                 </span>
               </h2>
-              <div className="block mt-sm md:hidden">
+              <section className="grid grid-cols-2 gap-sm mt-sm md:hidden">
                 <Contact
                   email={cv.email}
                   phone={cv.phone}
                   address={cv.address}
                   country={cv.country}
+                  links={cv.links}
                 />
-              </div>
-              <p className="pt-sm font-serif text-reg-serif max-w-[65ch]">
+              </section>
+              <p className="pt-sm font-serif text-small-serif max-w-[65ch]">
                 {cv.description}
               </p>
             </div>
@@ -60,40 +62,27 @@ const CvModal = ({ cv }) => {
                 phone={cv.phone}
                 address={cv.address}
                 country={cv.country}
+                links={cv.links}
               />
             </div>
+          </section>
+          <section className="pt-sm border-b-2 border-b-darkBlue">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              {cv.headlineWork}
+            </h2>
+            <WorkExperience jobs={cv.jobs} />
+          </section>
+          <section className="pt-sm">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              {cv.headlineEducation}
+            </h2>
+            <WorkExperience jobs={cv.jobs} />
           </section>
 
           {/* <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">
             {cv.headlineWork}
           </h2>
-          <ul>
-            {cv.jobs.map((job, i) => (
-              <li
-                key={i}
-                className="pt-[--gap-mini] pb-[--gap-mini] border-t-2 border-t-darkBlue grid md:grid-cols-[20ch_1fr_1fr]"
-              >
-                <div>
-                  <h3 className="text-black text-small font-bold">
-                    {job.occupationTitle}
-                  </h3>
-                </div>
-                <div className="md:contents">
-                  <h4 className="text-darkGray ">
-                    <span className="font-bold mr-[5px] after:content-[','] md:after:content-[''] md:block md:mr-0">
-                      {job.workplaceTitle}
-                    </span>
-                    <span>
-                      {job.from} - {job.to}
-                    </span>
-                  </h4>
-                  <p className="font-serif text-reg-serif mt-[--gap-small] md:mt-0">
-                    {job.jobDescription}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+         
         </section>
         <section className="py-[--gap-small]">
           <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">

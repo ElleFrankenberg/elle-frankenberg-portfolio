@@ -10,6 +10,7 @@ module.exports = {
       fontSize: {
         xsm: "0.75rem",
         reg: "1rem",
+        "small-serif": "1rem",
         "reg-serif": "1.3rem",
         small: "1.25rem",
         medium: "2rem",
