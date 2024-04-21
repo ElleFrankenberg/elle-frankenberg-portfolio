@@ -6,7 +6,9 @@ import Popup from "reactjs-popup";
 import { FaFileDownload } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import Contact from "./Contact";
-import WorkExperience from "../../lists/WorkExperience";
+import ExperienceList from "../../lists/ExperienceList";
+import EducationExperienceList from "../../lists/EducationExperienceList";
+import BulletList from "../../lists/BulletList";
 
 const CvModal = ({ cv }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -43,7 +45,7 @@ const CvModal = ({ cv }) => {
                   {cv.occupationTitle} | {cv.extraWorkTitle}
                 </span>
               </h2>
-              <section className="grid grid-cols-2 gap-sm mt-sm md:hidden">
+              <div className="grid grid-cols-2 gap-sm mt-sm md:hidden">
                 <Contact
                   email={cv.email}
                   phone={cv.phone}
@@ -51,7 +53,7 @@ const CvModal = ({ cv }) => {
                   country={cv.country}
                   links={cv.links}
                 />
-              </section>
+              </div>
               <p className="pt-sm font-serif text-small-serif max-w-[65ch]">
                 {cv.description}
               </p>
@@ -66,55 +68,30 @@ const CvModal = ({ cv }) => {
               />
             </div>
           </section>
+          <section className="pt-sm pb-sm border-b-2 border-b-darkBlue">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              Tech & Tools
+            </h2>
+            <BulletList skills={cv.techAndTools} />
+          </section>
+          <section className="pt-sm pb-sm border-b-2 border-b-darkBlue">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              Skills
+            </h2>
+            <BulletList skills={cv.skills} />
+          </section>
           <section className="pt-sm border-b-2 border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               {cv.headlineWork}
             </h2>
-            <WorkExperience jobs={cv.jobs} />
+            <ExperienceList experiences={cv.jobs} />
           </section>
-          <section className="pt-sm">
+          <section className="pt-sm pb-sm">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               {cv.headlineEducation}
             </h2>
-            <WorkExperience jobs={cv.jobs} />
+            <ExperienceList experiences={cv.educations} />
           </section>
-
-          {/* <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">
-            {cv.headlineWork}
-          </h2>
-         
-        </section>
-        <section className="py-[--gap-small]">
-          <h2 className="text-darkBlue text-medium font-bold leading-normal pb-[--gap-mini]">
-            {cv.headlineEducation}
-          </h2>
-          <ul>
-            {cv.educations.map((education, i) => (
-              <li
-                key={i}
-                className="pt-[--gap-mini] pb-[--gap-mini] border-t-2 border-t-darkBlue grid md:grid-cols-[20ch_1fr_1fr]"
-              >
-                <div>
-                  <h3 className="text-black text-small font-bold">
-                    {education.educationTitle}
-                  </h3>
-                </div>
-                <div className="md:contents">
-                  <h4 className="text-darkGray ">
-                    <span className="font-bold block ">
-                      {education.schoolTitle}
-                    </span>
-                    <span>
-                      {education.from} - {education.to}
-                    </span>
-                  </h4>
-                  <p className="font-serif text-reg-serif mt-[--gap-small] md:mt-0">
-                    {education.description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul> */}
         </section>
       </Popup>
     </>
