@@ -1,6 +1,6 @@
 const TechList = ({ tech }) => {
   return (
-    <>
+    <div className="max-w-[65ch]">
       <h2 className="text-center text-lg font-bold text-darkBlue leading-none ">
         Tech
       </h2>
@@ -11,7 +11,7 @@ const TechList = ({ tech }) => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 export default TechList;

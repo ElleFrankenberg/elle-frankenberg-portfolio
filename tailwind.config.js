@@ -14,7 +14,7 @@ module.exports = {
         "reg-serif": "1.3rem",
         small: "1.25rem",
         medium: "2rem",
-        lg: "5rem",
+        lg: "4.5rem",
         huge: "7.5rem",
       },
       fontFamily: {

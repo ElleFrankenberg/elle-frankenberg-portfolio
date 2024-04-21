@@ -7,7 +7,7 @@ const ExperienceList = ({ experiences }) => {
             <h3 className="text-reg font-bold text-darkBlue">
               {experience.title}
             </h3>
-            <h4 className="text-darkGray flex">
+            <h4 className="text-darkGray flex flex-wrap">
               <span className="font-bold mr-[5px] after:content-[','] mr-xs">
                 {experience.placeTitle}
               </span>

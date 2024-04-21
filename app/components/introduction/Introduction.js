@@ -44,7 +44,7 @@ const Introduction = ({
             <SocialLinkList socialLinks={socialLinks} />
           </ul>
         </section>
-        <section className="min-h-[40dvh] flex flex-col justify-center bg-lightBlue w-calc(100vw - (2 * 2rem)) ml-[-2rem] mr-[-2rem] lg:w-100 lg:ml-0 ">
+        <section className="min-h-[50dvh] flex flex-col justify-center items-center bg-lightBlue w-calc(100vw - (2 * 2rem)) ml-[-2rem] mr-[-2rem] lg:w-100 lg:ml-0 ">
           <TechList tech={tech} />
         </section>
       </header>

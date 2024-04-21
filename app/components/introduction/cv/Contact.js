@@ -12,7 +12,7 @@ const Contact = ({ email, phone, address, country, links }) => {
           <li>{country}</li>
         </ul>
       </div>
-      <div className="justify-self-center">
+      <div className="md:justify-self-center">
         <h3 className="text-reg font-bold text-darkBlue md:pt-sm ">Links</h3>
         <ul>
           {links.map((link) => (

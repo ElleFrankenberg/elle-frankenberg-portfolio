@@ -45,7 +45,7 @@ const CvModal = ({ cv }) => {
                   {cv.occupationTitle} | {cv.extraWorkTitle}
                 </span>
               </h2>
-              <div className="grid grid-cols-2 gap-sm mt-sm md:hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-sm mt-sm md:hidden">
                 <Contact
                   email={cv.email}
                   phone={cv.phone}
