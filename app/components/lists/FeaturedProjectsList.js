@@ -1,27 +1,22 @@
 import Image from "next/image";
+import ProjectCard from "../cards/ProjectCard";
 
 const FeaturedProjectsList = ({ featuredProjects }) => {
   console.log(featuredProjects);
   return (
-    <section className="px-md pt-lg">
+    <section className="pt-lg pb-lg">
       <h2 className="text-center text-lg font-bold text-darkBlue leading-none ">
         Featured Projects
       </h2>
-      <ul className="">
+      <ul className=" flex justify-center">
         {featuredProjects.map((project) => (
-          <li key={project.id} className="pt-md flex">
-            <Image
-              className="md:mr-md lg:w-[9.3rem] lg:h-[9.3rem]"
-              src={project.cover}
-              width={200}
-              height={200}
-              alt="cover"
-            />
-            <div>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-            </div>
-          </li>
+          <ProjectCard
+            key={project.id}
+            cover={project.cover}
+            title={project.title}
+            description={project.description}
+            year={project.year}
+          />
         ))}
       </ul>
     </section>

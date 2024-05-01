@@ -6,9 +6,8 @@ import Popup from "reactjs-popup";
 import { FaFileDownload } from "react-icons/fa";
 import { IoCloseCircle } from "react-icons/io5";
 import Contact from "./Contact";
-import ExperienceList from "../../lists/ExperienceList";
-import EducationExperienceList from "../../lists/EducationExperienceList";
-import BulletList from "../../lists/BulletList";
+import ExperienceList from "./ExperienceList";
+import BulletList from "./BulletList";
 
 const CvModal = ({ cv }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
