@@ -25,8 +25,8 @@ const Introduction = ({
               height={200}
               alt="profile"
             />
-            <h1 className="mt-sm md:mt-0 font-bold leading-none ">
-              <span className="block text-medium text-darkGray  md:text-[3vw]">
+            <h1 className="text-center mt-sm md:mt-0 font-bold leading-none lg:text-left">
+              <span className="block text-medium text-darkGray md:text-[3.5vw]">
                 {name}
               </span>
               <span className="block text-reg text-darkBlue  mt-xs ">

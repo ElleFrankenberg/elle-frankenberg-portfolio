@@ -5,14 +5,14 @@ import { FaGithub } from "react-icons/fa";
 const SocialLinkList = ({ socialLinks }) => {
   return (
     <>
-      <li className="">
+      <li>
         <Link href={socialLinks[0]}>
-          <FaGithub className="w-[32px] h-[32px] text-darkBlue" />
+          <FaGithub className="w-[32px] h-[32px] text-darkGray hover:text-darkBlue transition-colors" />
         </Link>
       </li>
-      <li className="">
+      <li>
         <Link href={socialLinks[1]}>
-          <FaLinkedin className="w-[33px] h-[32px] text-darkBlue" />
+          <FaLinkedin className="w-[33px] h-[32px] text-darkGray hover:text-darkBlue transition-colors" />
         </Link>
       </li>
     </>

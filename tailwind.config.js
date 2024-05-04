@@ -25,6 +25,7 @@ module.exports = {
         white: "#fff",
         black: "#1d1d1d",
         darkGray: "#565656",
+        lightGray: "#F5F5F5",
         lightPink: "#FCEDEA",
         darkPink: "#EB5577",
         lightBlue: "#EDFFFF",
@@ -37,7 +38,8 @@ module.exports = {
         sm: "1rem",
         md: "2rem",
         lg: "3rem",
-        // xl: "24px",
+        xl: "5rem",
+        xxl: "7.5rem",
       },
     },
     screens: {

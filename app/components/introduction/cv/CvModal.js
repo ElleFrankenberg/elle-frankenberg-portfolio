@@ -18,7 +18,7 @@ const CvModal = ({ cv }) => {
     <>
       <button
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
-        className="bg-darkBlue w-[33px] h-[32px] rounded-full text-white uppercase font-bold "
+        className="bg-darkGray hover:bg-darkBlue transition-colors w-[33px] h-[32px] rounded-full text-white uppercase font-bold "
       >
         CV
       </button>
