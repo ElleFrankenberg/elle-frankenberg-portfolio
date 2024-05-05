@@ -26,10 +26,10 @@ const Introduction = ({
               alt="profile"
             />
             <h1 className="text-center mt-sm md:mt-0 font-bold leading-none lg:text-left">
-              <span className="block text-medium text-darkGray md:text-[3.5vw]">
+              <span className="block text-medium text-darkBlue md:text-[3.5vw]">
                 {name}
               </span>
-              <span className="block text-reg text-darkBlue  mt-xs ">
+              <span className="block text-reg text-darkGray  mt-xs ">
                 {occupationTitle} | {extraWorkTitle}
               </span>
             </h1>

@@ -1,6 +1,7 @@
 import Introduction from "./components/introduction/Introduction";
 import { fetchData } from "@/lib/fetchData";
 import FeaturedProjectsList from "./components/lists/FeaturedProjectsList";
+import OtherProjectsList from "./components/lists/OtherProjectsList";
 
 export default async function Home() {
   const content = await fetchData();
@@ -21,6 +22,7 @@ export default async function Home() {
       />
       <main>
         <FeaturedProjectsList featuredProjects={content.featuredProjects} />
+        <OtherProjectsList otherProjects={content.otherProjects} />
       </main>
     </>
   );

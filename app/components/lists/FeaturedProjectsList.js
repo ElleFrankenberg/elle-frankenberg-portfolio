@@ -1,15 +1,14 @@
-import ProjectCard from "../cards/ProjectCard";
+import FeaturedProjectCard from "../cards/FeaturedProjectCard";
 
 const FeaturedProjectsList = ({ featuredProjects }) => {
-  console.log(featuredProjects);
   return (
-    <section className="max-w-[75rem] my-0 mx-auto px-md">
-      <h2 className="pt-lg text-center text-lg font-bold text-darkBlue leading-none ">
+    <section>
+      <h2 className="py-lg text-center lg:text-start px-md 2xl:px-0 text-lg font-bold text-darkBlue leading-none ">
         Featured Projects
       </h2>
       <ul className="flex justify-center ">
         {featuredProjects.map((project) => (
-          <ProjectCard
+          <FeaturedProjectCard
             key={project.id}
             cover={project.cover}
             title={project.title}
@@ -17,6 +16,7 @@ const FeaturedProjectsList = ({ featuredProjects }) => {
             year={project.year}
             technologies={project.technologies}
             urls={project.urls}
+            backgroundColor={project.backgroundColor}
           />
         ))}
       </ul>

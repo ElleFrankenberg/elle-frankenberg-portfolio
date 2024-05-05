@@ -3,16 +3,20 @@ import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-const ProjectCard = ({
+const FeaturedProjectCard = ({
   year,
   title,
   cover,
   description,
   technologies,
   urls,
+  backgroundColor,
 }) => {
   return (
-    <li className="pb-lg pt-lg grid grid-cols-1 md:grid-cols-2 gap-4 min-h-content">
+    <li
+      style={{ backgroundColor: backgroundColor }}
+      className="p-md grid grid-cols-1 md:grid-cols-2 gap-4 min-h-content"
+    >
       <figure className="row-span-2 md:mb-0 md:mt-0  h-full">
         <Image
           width={800}
@@ -30,7 +34,10 @@ const ProjectCard = ({
         <p className="text-reg-serif mt-2">{description}</p>
         <ul className="flex flex-wrap gap-xs pt-sm">
           {technologies.map((technologie) => (
-            <li key={technologie} className="bg-darkGray text-white px-xs">
+            <li
+              key={technologie}
+              className="border border-darkGray  text-darkGray px-xs"
+            >
               {technologie}
             </li>
           ))}
@@ -40,9 +47,9 @@ const ProjectCard = ({
             <Link
               target="_blank"
               href={urls[0]}
-              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-lightGray text-darkGray hover:bg-darkBlue hover:text-white transition-colors"
+              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray hover:bg-darkBlue hover:text-white transition-colors"
             >
-              <FaGithub className="w-[32px] h-[32px] text-darkGray group-hover:text-white mr-xs" />
+              <FaGithub className="w-[32px] h-[32px] text-lightGray group-hover:text-white mr-xs" />
               View the code
             </Link>
           </li>
@@ -50,9 +57,9 @@ const ProjectCard = ({
             <Link
               target="_blank"
               href={urls[0]}
-              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-lightGray text-darkGray hover:bg-darkPink hover:text-white transition-colors"
+              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray hover:bg-darkPink hover:text-white transition-colors"
             >
-              <FaArrowAltCircleRight className=" -rotate-45 w-[32px] h-[32px] text-darkGray group-hover:text-white mr-xs" />
+              <FaArrowAltCircleRight className=" -rotate-45 w-[32px] h-[32px] text-lightGray group-hover:text-white mr-xs" />
               Live demo
             </Link>
           </li>
@@ -62,4 +69,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;
+export default FeaturedProjectCard;
