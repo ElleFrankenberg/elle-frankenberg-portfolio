@@ -40,6 +40,7 @@
   --gap-small: 1rem;
   --gap-medium: 3rem;
   --border: 1px solid var(--color-black);
+  --line-gap: 1rem;
 }
 
 html {
@@ -71,6 +72,50 @@ p {
 
 a {
   cursor: pointer;
+}
+
+/* project grid */
+
+.project-grid::before,
+.project-grid::after {
+  position: absolute;
+  content: "";
+  border: var(--line-gap) solid var(--white);
+  height: calc(100% - 2px);
+  top: 1px;
+  width: calc(100% + 2px);
+  z-index: 1;
+  pointer-events: none;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.project-card {
+  border: none;
+  position: relative;
+  border-bottom: var(--border);
+}
+
+.project-card::before,
+.project-card::after {
+  position: absolute;
+  content: "";
+  background-color: var(--darkBlue);
+  width: 1px;
+  height: calc(100% - calc(var(--line-gap) * 2));
+  top: calc(var(--line-gap) + 1px);
+  right: -1px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.project-card::after {
+  bottom: -1px;
+  top: unset;
+  right: unset;
+  left: calc(var(--line-gap) + 1px);
+  width: calc(100% - calc(var(--line-gap) * 2));
+  height: 1px;
 }
 
 /* target :nth-child() */

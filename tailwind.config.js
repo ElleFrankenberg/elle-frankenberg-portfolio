@@ -41,6 +41,9 @@ module.exports = {
         xl: "5rem",
         xxl: "7.5rem",
       },
+      gridTemplateColumns: {
+        "project-list": "repeat(auto-fill, minmax(320px, 1fr))",
+      },
     },
     screens: {
       sm: "480px",

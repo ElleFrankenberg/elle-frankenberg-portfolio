@@ -1,10 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const OtherProjectCard = ({ cover, title, description, technologies, url }) => {
+const ProjectCard = ({
+  cover,
+  title,
+  slug,
+  description,
+  technologies,
+  url,
+}) => {
   return (
-    <li className="p-2 bg-white lg:hover:bg-lightBlue ease-in-out duration-150 group">
-      <Link className="flex flex-col" href={url} target="_blank">
+    <li key={slug} className="project-card p-sm">
+      <Link className="flex flex-col" href={`/projects/${slug}`}>
         <figure className="aspect-square relative">
           <Image
             width={600}
@@ -26,4 +33,4 @@ const OtherProjectCard = ({ cover, title, description, technologies, url }) => {
   );
 };
 
-export default OtherProjectCard;
+export default ProjectCard;

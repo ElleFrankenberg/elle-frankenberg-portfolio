@@ -4,12 +4,10 @@ import FeaturedProjectsList from "./components/lists/FeaturedProjectsList";
 import OtherProjectsList from "./components/lists/OtherProjectsList";
 
 export default async function Home() {
-  const content = await fetchData();
-
-  console.log(content);
+  const content = await fetchData("content");
 
   return (
-    <>
+    <main>
       <Introduction
         name={content.name}
         occupationTitle={content.occupationTitle}
@@ -20,10 +18,6 @@ export default async function Home() {
         profileImage={content.profileImage}
         tech={content.tech}
       />
-      <main>
-        <FeaturedProjectsList featuredProjects={content.featuredProjects} />
-        <OtherProjectsList otherProjects={content.otherProjects} />
-      </main>
-    </>
+    </main>
   );
 }
