@@ -23,8 +23,8 @@ const CvModal = ({ cv }) => {
         CV
       </button>
       <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
-        <section className="h-[92vh] overflow-auto mb-md">
-          <header className="border-b-2 border-b-darkBlue pb-sm flex items-center">
+        <section className="h-[92vh] overflow-auto">
+          <header className="border-b border-b-darkBlue pb-sm flex items-center">
             <Link href="#" className="flex items-center">
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
               Download CV
@@ -34,8 +34,8 @@ const CvModal = ({ cv }) => {
               className="w-[32px] h-[32px] text-darkBlue ml-auto cursor-pointer"
             />
           </header>
-          <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3 border-b-2 border-b-darkBlue pb-sm">
-            <div className="md:border-r-2 md:border-r-darkBlue md:pr-sm md:col-span-2">
+          <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3 border-b border-b-darkBlue pb-sm">
+            <div className="md:border-r md:border-r-darkBlue md:pr-sm md:col-span-2">
               <h2 className="md:mt-0 font-bold leading-none">
                 <span className="block text-medium text-darkGray">
                   {cv.name}
@@ -67,25 +67,25 @@ const CvModal = ({ cv }) => {
               />
             </div>
           </section>
-          <section className="pt-sm pb-sm border-b-2 border-b-darkBlue">
+          <section className="pt-sm pb-sm border-b border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               Tech & Tools
             </h2>
             <BulletList skills={cv.techAndTools} />
           </section>
-          <section className="pt-sm pb-sm border-b-2 border-b-darkBlue">
+          <section className="pt-sm pb-sm border-b border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               Skills
             </h2>
             <BulletList skills={cv.skills} />
           </section>
-          <section className="pt-sm border-b-2 border-b-darkBlue">
+          <section className="pt-sm border-b border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               {cv.headlineWork}
             </h2>
             <ExperienceList experiences={cv.jobs} />
           </section>
-          <section className="pt-sm pb-sm">
+          <section className="pt-sm ">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               {cv.headlineEducation}
             </h2>

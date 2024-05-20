@@ -2,6 +2,7 @@ import Image from "next/image";
 import SocialLinkList from "../lists/SocialLinkList";
 import TechList from "../lists/TechList";
 import CvModal from "./cv/CvModal";
+import SkillList from "../lists/SkillList";
 
 const Introduction = ({
   name,
@@ -15,8 +16,8 @@ const Introduction = ({
 }) => {
   return (
     <>
-      <header className="px-md grid grid-cols-1 lg:grid-cols-2 columns-[50%] lg:gap-sm">
-        <section className="pt-lg md:flex md:flex-col md:items-center">
+      <section className=" costum-grid p-0 grid grid-cols-1 lg:grid-cols-2  relative">
+        <div className="costum-grid-card p-sm pt-lg md:flex md:flex-col md:items-center">
           <div className="md:flex items-center justify-center">
             <Image
               className="mx-auto rounded-full md:mr-md lg:w-[9.3rem] lg:h-[9.3rem]"
@@ -43,11 +44,14 @@ const Introduction = ({
             </li>
             <SocialLinkList socialLinks={socialLinks} />
           </ul>
-        </section>
-        <section className="min-h-[50dvh] flex flex-col justify-center items-center bg-lightBlue w-calc(100vw - (2 * 2rem)) ml-[-2rem] mr-[-2rem] lg:w-100 lg:ml-0 ">
-          <TechList tech={tech} />
-        </section>
-      </header>
+        </div>
+        <div className="costum-grid-card p-sm">
+          <section className="min-h-[50dvh] h-full flex flex-col items-center justify-around">
+            <TechList tech={tech} />
+            <SkillList tech={tech} />
+          </section>
+        </div>
+      </section>
     </>
   );
 };

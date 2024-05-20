@@ -10,7 +10,7 @@ const ProjectCard = ({
   url,
 }) => {
   return (
-    <li key={slug} className="project-card p-sm">
+    <li key={slug} className="costum-grid-card p-sm">
       <Link className="flex flex-col" href={`/projects/${slug}`}>
         <figure className="aspect-square relative">
           <Image

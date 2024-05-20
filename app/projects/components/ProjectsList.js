@@ -3,7 +3,7 @@ import ProjectCard from "./ProjectCard";
 const ProjectsList = ({ projects }) => {
   return (
     <>
-      <ul className="project-grid p-0 grid grid-cols-project-list border border-b-darkBlue relative">
+      <ul className="costum-grid p-0 grid grid-cols-project-list relative">
         {projects.map((project) => (
           <ProjectCard
             key={project.slug}

@@ -74,10 +74,14 @@ a {
   cursor: pointer;
 }
 
-/* project grid */
+/* grid */
 
-.project-grid::before,
-.project-grid::after {
+.costum-grid {
+  min-height: calc(100vh - var(--footer-height) - var(--header-height));
+}
+
+.costum-grid::before,
+.costum-grid::after {
   position: absolute;
   content: "";
   border: var(--line-gap) solid var(--white);
@@ -90,14 +94,14 @@ a {
   box-sizing: border-box;
 }
 
-.project-card {
+.costum-grid-card {
   border: none;
   position: relative;
   border-bottom: var(--border);
 }
 
-.project-card::before,
-.project-card::after {
+.costum-grid-card::before,
+.costum-grid-card::after {
   position: absolute;
   content: "";
   background-color: var(--darkBlue);
@@ -109,7 +113,7 @@ a {
   pointer-events: none;
 }
 
-.project-card::after {
+.costum-grid-card::after {
   bottom: -1px;
   top: unset;
   right: unset;
