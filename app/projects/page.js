@@ -1,16 +1,13 @@
-import { fetchData } from "@/lib/fetchData";
 import ProjectsList from "./components/ProjectsList";
 
+import { promises as fs } from "fs";
+
 export default async function ProjectsPage() {
-  const projects = await fetchData("projects");
-
-  //   if (!allProjects) {
-  //     return <NoDataFound />;
-  //   }
-
-  return (
-    <main>
-      <ProjectsList projects={projects} />
-    </main>
+  const file = await fs.readFile(
+    process.cwd() + "/app/lib/projects.json",
+    "utf8"
   );
+  const projects = JSON.parse(file);
+
+  return <main>{<ProjectsList projects={projects.projects} />}</main>;
 }

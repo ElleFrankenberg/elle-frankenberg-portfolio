@@ -1,10 +1,13 @@
 import Introduction from "./components/introduction/Introduction";
-import { fetchData } from "@/lib/fetchData";
-import FeaturedProjectsList from "./components/lists/FeaturedProjectsList";
-import OtherProjectsList from "./components/lists/OtherProjectsList";
+
+import { promises as fs } from "fs";
 
 export default async function Home() {
-  const content = await fetchData("content");
+  const file = await fs.readFile(
+    process.cwd() + "/app/lib/mainContent.json",
+    "utf8"
+  );
+  const content = JSON.parse(file);
 
   return (
     <main>
@@ -17,6 +20,7 @@ export default async function Home() {
         socialLinks={content.socialLinks}
         profileImage={content.profileImage}
         tech={content.tech}
+        skills={content.skills}
       />
     </main>
   );

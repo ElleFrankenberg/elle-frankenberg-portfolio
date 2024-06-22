@@ -11,12 +11,13 @@ const Introduction = ({
   description,
   cv,
   tech,
+  skills,
   socialLinks,
   profileImage,
 }) => {
   return (
     <>
-      <section className=" costum-grid p-0 grid grid-cols-1 lg:grid-cols-2  relative">
+      <section className="costum-grid p-0 grid grid-cols-1 lg:grid-cols-2  relative">
         <div className="costum-grid-card p-sm pt-lg md:flex md:flex-col md:items-center">
           <div className="md:flex items-center justify-center">
             <Image
@@ -35,8 +36,20 @@ const Introduction = ({
               </span>
             </h1>
           </div>
-          <p className="pt-md font-serif text-reg-serif max-w-[65ch]">
-            {description}
+          <p className="pt-md  max-w-[65ch]">
+            I’m a self-motivated and creative frontend developer with a
+            background in arts and motion graphic design. This background has
+            given me a strong eye for detail and the ability to think outside
+            the box, transforming me into a creative problem solver who loves to
+            learn by exploring new things and taking on new tasks and
+            technologies.
+          </p>
+          <p className="pt-md  max-w-[65ch]">
+            Additionally, my years in tech have made me value structure and I'm
+            always aiming to write high-quality code. Something I love doing
+            together with colleagues who are just like me - positive, easygoing
+            and curious, with a “can-do” attitude, strong communication skills
+            and above all, share the same joy of writing really good code.
           </p>
           <ul className="py-md flex gap-4 justify-center">
             <li>
@@ -48,7 +61,7 @@ const Introduction = ({
         <div className="costum-grid-card p-sm">
           <section className="min-h-[50dvh] h-full flex flex-col items-center justify-around">
             <TechList tech={tech} />
-            <SkillList tech={tech} />
+            <SkillList skills={skills} />
           </section>
         </div>
       </section>

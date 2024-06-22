@@ -66,9 +66,9 @@ h3 {
   line-height: normal;
 }
 
-p {
+/* p {
   font-family: "EB Garamond12", serif;
-}
+} */
 
 a {
   cursor: pointer;
@@ -76,7 +76,8 @@ a {
 
 /* grid */
 
-.costum-grid {
+.costum-grid,
+.project {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 

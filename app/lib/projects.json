@@ -1,0 +1,63 @@
+{
+  "projects": [
+    {
+      "id": "01",
+      "title": "URBAN DESIGN - HCU HAFEN CITY UNIVERSITAET HAMBURG",
+      "slug": "urban-design",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066964/portfolio/ud_ugovbl.svg",
+      "year": "2023",
+      "description": "this is the projects description text",
+      "urls": ["https://ud.hcu-hamburg.de/"],
+      "technologies": ["Next.js", "React"]
+    },
+    {
+      "id": "02",
+      "title": "International Architecture Biennale Rotterdam (IABR)",
+      "slug": "iabr",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066175/portfolio/IABR_LOGO_FINAL_gopo3i.svg",
+      "year": "2023",
+      "description": "this is the projects description text",
+      "urls": ["https://iabr.nl/en"],
+      "technologies": ["Next.js", "React"]
+    },
+    {
+      "id": "03",
+      "title": "Queer speed dating",
+      "slug": "queer-speed-dating",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719065878/portfolio/logo_y1zzn6.png",
+      "year": "2023",
+      "description": "this is the projects description text anf iths bjkenklon hgaklhd jkhkj dkjd kjd kjjdbkjhkjd jkhbkjhhkjd jhbdbjbdbj hjkhkjhkd dhkjdhd hkjd dhjdhdbdmdb",
+      "urls": [
+        "https://queer-speed-dating.vercel.app/",
+        "https://github.com/ElleFrankenberg/queer-speed-dating"
+      ],
+      "technologies": ["Next.js", "React"]
+    },
+    {
+      "id": "04",
+      "title": "francisca khamis Giacoman - portfolio",
+      "slug": "francisca-khamis",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719067796/portfolio/francisca-Khamis_gvmis7.png",
+      "year": "2023",
+      "description": "this is the projects description text",
+      "urls": [
+        "https://queer-speed-dating.vercel.app/",
+        "https://github.com/ElleFrankenberg/queer-speed-dating"
+      ],
+      "technologies": ["Next.js", "React"]
+    },
+    {
+      "id": "05",
+      "title": "Queer speed dating",
+      "slug": "queer-sd-dating",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1714589831/portfolio/queerspeeddating_u1ruro.png",
+      "year": "2023",
+      "description": "this is the projects description text",
+      "urls": [
+        "https://queer-speed-dating.vercel.app/",
+        "https://github.com/ElleFrankenberg/queer-speed-dating"
+      ],
+      "technologies": ["Next.js", "React"]
+    }
+  ]
+}

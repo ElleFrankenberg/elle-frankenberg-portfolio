@@ -6,10 +6,11 @@ const ProjectsList = ({ projects }) => {
       <ul className="costum-grid p-0 grid grid-cols-project-list relative">
         {projects.map((project) => (
           <ProjectCard
-            key={project.slug}
+            id={project.id}
             cover={project.cover}
             title={project.title}
             slug={project.slug}
+            year={project.year}
             description={project.description}
             technologies={project.technologies}
             url={project.url}

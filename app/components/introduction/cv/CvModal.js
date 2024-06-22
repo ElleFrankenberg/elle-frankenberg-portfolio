@@ -25,10 +25,14 @@ const CvModal = ({ cv }) => {
       <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
         <section className="h-[92vh] overflow-auto">
           <header className="border-b border-b-darkBlue pb-sm flex items-center">
-            <Link href="#" className="flex items-center">
+            <a
+              href="/Elle_Frankenberg_CV_en.pdf"
+              download="Elle_Frankenberg_CV_en.pdf"
+              className="flex items-center hover:text-darkBlue"
+            >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
               Download CV
-            </Link>
+            </a>
             <IoCloseCircle
               onClick={closeModal}
               className="w-[32px] h-[32px] text-darkBlue ml-auto cursor-pointer"
@@ -53,8 +57,21 @@ const CvModal = ({ cv }) => {
                   links={cv.links}
                 />
               </div>
-              <p className="pt-sm font-serif text-small-serif max-w-[65ch]">
-                {cv.description}
+              <p className="pt-sm max-w-[65ch]">
+                I’m a self-motivated and creative frontend developer with a
+                background in arts and motion graphic design. This background
+                has given me a strong eye for detail and the ability to think
+                outside the box, transforming me into a creative problem solver
+                who loves to learn by exploring new things and taking on new
+                tasks and technologies.
+              </p>
+              <p className="pt-sm max-w-[65ch]">
+                Additionally, my years in tech have made me value structure and
+                I'm always aiming to write high-quality code. Something I love
+                doing together with colleagues who are just like me - positive,
+                easygoing and curious, with a “can-do” attitude, strong
+                communication skills and above all, share the same joy of
+                writing really good code.
               </p>
             </div>
             <div className="hidden md:block pl-sm">
@@ -67,17 +84,20 @@ const CvModal = ({ cv }) => {
               />
             </div>
           </section>
-          <section className="pt-sm pb-sm border-b border-b-darkBlue">
-            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
-              Tech & Tools
-            </h2>
-            <BulletList skills={cv.techAndTools} />
-          </section>
-          <section className="pt-sm pb-sm border-b border-b-darkBlue">
-            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
-              Skills
-            </h2>
-            <BulletList skills={cv.skills} />
+
+          <section className="grid grid-cols-1 md:grid-cols-2 border-b border-b-darkBlue md:pt-sm md:pb-sm">
+            <div className="py-sm md:py-0 border-b border-b-darkBlue md:border-b-0  md:border-r md:border-r-darkBlue md:pr-sm ">
+              <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+                Tech & Tools
+              </h2>
+              <BulletList skills={cv.techAndTools} />
+            </div>
+            <div className="py-sm md:py-0 md:pl-sm ">
+              <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+                Skills
+              </h2>
+              <BulletList skills={cv.skills} />
+            </div>
           </section>
           <section className="pt-sm border-b border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
@@ -85,11 +105,17 @@ const CvModal = ({ cv }) => {
             </h2>
             <ExperienceList experiences={cv.jobs} />
           </section>
-          <section className="pt-sm ">
+          <section className="pt-sm pb-sm border-b border-b-darkBlue">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               {cv.headlineEducation}
             </h2>
             <ExperienceList experiences={cv.educations} />
+          </section>
+          <section className="pt-sm pb-sm">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              Other merits
+            </h2>
+            <ExperienceList experiences={cv.otherMetits} />
           </section>
         </section>
       </Popup>

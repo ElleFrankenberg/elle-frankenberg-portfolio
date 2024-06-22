@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="max-w-[1600px]">
+      <body className="max-w-[1599px]">
         <Header />
         <>{children}</>
         <Footer />
