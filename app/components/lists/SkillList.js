@@ -1,6 +1,6 @@
 const SkillList = ({ skills }) => {
   return (
-    <div className="max-w-[65ch]">
+    <div className="max-w-[65ch] mt-lg mb-md lg:mt-0 lg:mb-0">
       <h2 className="text-center mt-sm md:mt-0 font-bold leading-none ">
         <span className="block text-medium text-darkBlue md:text-[3.5vw]">
           Skills

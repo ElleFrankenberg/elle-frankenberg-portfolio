@@ -1,6 +1,6 @@
 const TechList = ({ tech }) => {
   return (
-    <div className="max-w-[65ch]">
+    <div className="max-w-[65ch] mt-md lg:mt-0 ">
       <h2 className="text-center mt-sm md:mt-0 font-bold leading-none ">
         <span className="block text-medium text-darkBlue md:text-[3.5vw]">
           Tech & Tools

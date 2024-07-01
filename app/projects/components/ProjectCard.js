@@ -14,13 +14,13 @@ const ProjectCard = ({
   return (
     <li key={id} className="costum-grid-card p-sm ">
       <Link className="flex flex-col " href={`/projects/${slug}`}>
-        <figure className="aspect-square relative flex items-center">
+        <figure className="aspect-square flex items-center">
           <Image
             width={600}
             height={800}
             src={cover}
             alt="Project cover"
-            className="object-contain absolute h-[auto] w-full object-left-bottom"
+            className="object-contain  h-[auto] w-full"
           />
         </figure>
 

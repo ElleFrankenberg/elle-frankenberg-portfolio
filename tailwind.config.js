@@ -50,6 +50,7 @@ module.exports = {
       md: "768px",
       lg: "976px",
       xl: "1281px",
+      xxl: "1600px",
       "2xl": { min: "1920px" },
     },
   },

@@ -20,10 +20,7 @@ const Footer = () => {
   }, [footerRef.current]);
 
   return (
-    <footer
-      ref={footerRef}
-      className="p-sm border-t border-t-darkBlue bg-white"
-    >
+    <footer ref={footerRef} className="p-sm">
       footer
     </footer>
   );

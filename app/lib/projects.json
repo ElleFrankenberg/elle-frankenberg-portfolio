@@ -1,27 +1,39 @@
 {
   "projects": [
     {
-      "id": "01",
+      "id": "urban-design_01",
       "title": "URBAN DESIGN - HCU HAFEN CITY UNIVERSITAET HAMBURG",
       "slug": "urban-design",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066964/portfolio/ud_ugovbl.svg",
       "year": "2023",
       "description": "this is the projects description text",
       "urls": ["https://ud.hcu-hamburg.de/"],
-      "technologies": ["Next.js", "React"]
+      "technologies": [
+        "Next.js,",
+        "React,",
+        "Kirby Headless CMS,",
+        "Tailwind CSS"
+      ],
+      "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
     },
     {
-      "id": "02",
+      "id": "iabr_02",
       "title": "International Architecture Biennale Rotterdam (IABR)",
       "slug": "iabr",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066175/portfolio/IABR_LOGO_FINAL_gopo3i.svg",
       "year": "2023",
       "description": "this is the projects description text",
       "urls": ["https://iabr.nl/en"],
-      "technologies": ["Next.js", "React"]
+      "technologies": [
+        "Next.js,",
+        "React,",
+        "Kirby Headless CMS,",
+        "CSS Modules"
+      ],
+      "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
     },
     {
-      "id": "03",
+      "id": "queer-speed-dating_03",
       "title": "Queer speed dating",
       "slug": "queer-speed-dating",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719065878/portfolio/logo_y1zzn6.png",
@@ -31,10 +43,17 @@
         "https://queer-speed-dating.vercel.app/",
         "https://github.com/ElleFrankenberg/queer-speed-dating"
       ],
-      "technologies": ["Next.js", "React"]
+      "technologies": [
+        "Next.js,",
+        "React,",
+        "MongoDB,",
+        "NextAuth.js,",
+        "CSS Modules"
+      ],
+      "designBy": ["August Florén", "https://augustfloren.myportfolio.com/"]
     },
     {
-      "id": "04",
+      "id": "francisca-khamis_04",
       "title": "francisca khamis Giacoman - portfolio",
       "slug": "francisca-khamis",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719067796/portfolio/francisca-Khamis_gvmis7.png",
@@ -44,20 +63,35 @@
         "https://queer-speed-dating.vercel.app/",
         "https://github.com/ElleFrankenberg/queer-speed-dating"
       ],
-      "technologies": ["Next.js", "React"]
+      "technologies": [
+        "Next.js,",
+        "React,",
+        "Kirby Headless CMS,",
+        "CSS Modules"
+      ],
+      "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
     },
     {
-      "id": "05",
-      "title": "Queer speed dating",
-      "slug": "queer-sd-dating",
-      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1714589831/portfolio/queerspeeddating_u1ruro.png",
-      "year": "2023",
-      "description": "this is the projects description text",
-      "urls": [
-        "https://queer-speed-dating.vercel.app/",
-        "https://github.com/ElleFrankenberg/queer-speed-dating"
-      ],
-      "technologies": ["Next.js", "React"]
+      "id": "wunderbaum_05",
+      "title": "Wunderbaum",
+      "slug": "wunderbaum",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719859336/portfolio/wunderbaum_tnlaq0.png",
+      "year": "2022",
+      "description": "this is the site of the performace group Wunderbaum",
+      "urls": ["https://wunderbaum.nl/en/projects"],
+      "technologies": ["Kirby CMS,", "PHP,", "JavaScript,", "CSS"],
+      "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
+    },
+    {
+      "id": "lukas-juliger_06",
+      "title": "Lukas Jüliger",
+      "slug": "lukas-juliger",
+      "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719858499/portfolio/logo_nlskg2.svg",
+      "year": "2022",
+      "description": "this is the portfolio of Lukas Jüliger",
+      "urls": ["https://lukasjueliger.com/"],
+      "technologies": ["Kirby CMS,", "PHP,", "JavaScript,", "CSS"],
+      "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
     }
   ]
 }
