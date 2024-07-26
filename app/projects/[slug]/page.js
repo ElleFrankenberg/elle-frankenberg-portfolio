@@ -1,5 +1,6 @@
-import Video from "../components/Video";
+import ProjectVideo from "../components/ProjectVideo";
 import InformationList from "../components/InformationList";
+import { Suspense } from "react";
 import { promises as fs } from "fs";
 
 export default async function ProjectPage({ params: { slug } }) {
@@ -13,7 +14,11 @@ export default async function ProjectPage({ params: { slug } }) {
 
   return (
     <main className="project">
-      <Video />
+      {project.video && (
+        <Suspense fallback={<p>Loading video...</p>}>
+          <ProjectVideo video={project.video} />
+        </Suspense>
+      )}
       <InformationList projectInfo={project} />
     </main>
   );

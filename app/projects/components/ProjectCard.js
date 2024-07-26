@@ -13,7 +13,7 @@ const ProjectCard = ({
 }) => {
   return (
     <li key={id} className="costum-grid-card p-sm ">
-      <Link className="flex flex-col " href={`/projects/${slug}`}>
+      <Link className="flex flex-col min-h-full" href={`/projects/${slug}`}>
         <figure className="aspect-square flex items-center">
           <Image
             width={600}
@@ -24,7 +24,7 @@ const ProjectCard = ({
           />
         </figure>
 
-        <div className="mt-2">
+        <div className="mt-2 grow flex flex-col justify-end">
           <h3 className="font-bold text-reg uppercase text-darkGary">{year}</h3>
           <h2 className="font-bold text-reg uppercase text-darkBlue">
             {title}

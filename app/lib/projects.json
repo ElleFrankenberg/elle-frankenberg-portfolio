@@ -6,7 +6,7 @@
       "slug": "urban-design",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066964/portfolio/ud_ugovbl.svg",
       "year": "2023",
-      "description": "this is the projects description text",
+      "description": "Responsive website featuring filtering and infinite scroll functionalities for the Research & Teaching program at the Urban Design department of Hafencity University of Hamburg. The site is built with Next.js using the App Router, and it fetches data from endpoints provided by Kirby Headless CMS.",
       "urls": ["https://ud.hcu-hamburg.de/"],
       "technologies": [
         "Next.js,",
@@ -18,11 +18,12 @@
     },
     {
       "id": "iabr_02",
+      "video": "https://res.cloudinary.com/mittbildmoln/video/upload/v1721830314/portfolio/iabr_test_gscuvj.mov",
       "title": "International Architecture Biennale Rotterdam (IABR)",
       "slug": "iabr",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719066175/portfolio/IABR_LOGO_FINAL_gopo3i.svg",
       "year": "2023",
-      "description": "this is the projects description text",
+      "description": "Multilingual and responsive website featuring filtering and animations for the International Architecture Biennale in Rotterdam. The site is built with Next.js using the Pages Router, and it fetches data from endpoints provided by Kirby Headless CMS.",
       "urls": ["https://iabr.nl/en"],
       "technologies": [
         "Next.js,",
@@ -38,7 +39,7 @@
       "slug": "queer-speed-dating",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719065878/portfolio/logo_y1zzn6.png",
       "year": "2023",
-      "description": "this is the projects description text anf iths bjkenklon hgaklhd jkhkj dkjd kjd kjjdbkjhkjd jkhbkjhhkjd jhbdbjbdbj hjkhkjhkd dhkjdhd hkjd dhjdhdbdmdb",
+      "description": "Responsive full-stack application designed as a fast and efficient tool for organizers of queer speed dating events. The application allows participants to enter their personal details, which are stored in a MongoDB database, and generates a dedicated page for each participant. Post-event, organizers log in to access the matchmaking functionality, input participant preferences, and generate lists of love and friend matches. Originally designed and built as a hobby project, it was utilized by the organizers of Linköping Pride 2024. The site is built with Next.js and React, utilizing NextAuth.js for authentication.",
       "urls": [
         "https://queer-speed-dating.vercel.app/",
         "https://github.com/ElleFrankenberg/queer-speed-dating"
@@ -58,7 +59,7 @@
       "slug": "francisca-khamis",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719067796/portfolio/francisca-Khamis_gvmis7.png",
       "year": "2023",
-      "description": "this is the projects description text",
+      "description": "Portfolio of performance and installation artist Francisca Khamis Giacoman. The site is responsive, multilingual, and built with Next.js using the Pages Router. It fetches data from endpoints provided by Kirby Headless CMS.",
       "urls": [
         "https://queer-speed-dating.vercel.app/",
         "https://github.com/ElleFrankenberg/queer-speed-dating"
@@ -77,7 +78,7 @@
       "slug": "wunderbaum",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719859336/portfolio/wunderbaum_tnlaq0.png",
       "year": "2022",
-      "description": "this is the site of the performace group Wunderbaum",
+      "description": "Multilingual and responsive website for the Dutch theater group, Wunderbaum",
       "urls": ["https://wunderbaum.nl/en/projects"],
       "technologies": ["Kirby CMS,", "PHP,", "JavaScript,", "CSS"],
       "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
@@ -88,7 +89,7 @@
       "slug": "lukas-juliger",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719858499/portfolio/logo_nlskg2.svg",
       "year": "2022",
-      "description": "this is the portfolio of Lukas Jüliger",
+      "description": "Portfolio of the illustrator and author Lukas Jüliger",
       "urls": ["https://lukasjueliger.com/"],
       "technologies": ["Kirby CMS,", "PHP,", "JavaScript,", "CSS"],
       "designBy": ["Our Polite Society", "https://ourpolitesociety.net/en"]
