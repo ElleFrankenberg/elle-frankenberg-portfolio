@@ -1,7 +1,7 @@
 import Introduction from "./components/introduction/Introduction";
 
 export default async function Home() {
-  const URL = `https://raw.githubusercontent.com/ElleFrankenberg/elle-frankenberg-portfolio/main/app/lib/mainContent.json?token=${process.env.MAIN_CONTENT_TOKEN}`;
+  const URL = `https://raw.githubusercontent.com/ElleFrankenberg/elle-frankenberg-portfolio/main/app/lib/mainContent.json?token=${process.env.NEXT_PUBLIC_MAIN_CONTENT_TOKEN}`;
 
   try {
     const response = await fetch(URL);
@@ -17,7 +17,7 @@ export default async function Home() {
     console.log(content);
 
     if (!content) {
-      throw new Error(`Project with slug "${slug}" not found`);
+      throw new Error(`Not found`);
     }
 
     return (
