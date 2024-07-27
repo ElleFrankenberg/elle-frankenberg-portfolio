@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 import Popup from "reactjs-popup";
 import { FaFileDownload } from "react-icons/fa";
@@ -115,7 +114,7 @@ const CvModal = ({ cv }) => {
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
               Other merits
             </h2>
-            <ExperienceList experiences={cv.otherMetits} />
+            <ExperienceList experiences={cv.otherMerits} />
           </section>
         </section>
       </Popup>

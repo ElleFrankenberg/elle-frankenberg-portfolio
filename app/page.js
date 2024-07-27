@@ -68,7 +68,7 @@ export default async function Home() {
           socialLinks={content.socialLinks}
           profileImage={content.profileImage}
           tech={content.tech}
-          // skills={content.skills}
+          skills={content.skills}
         />
       </main>
     );
