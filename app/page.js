@@ -1,10 +1,9 @@
 import Introduction from "./components/introduction/Introduction";
 
 export default async function Home() {
-  const URL = process.env.MAIN_CONTENT_URL;
+  const URL = `https://raw.githubusercontent.com/ElleFrankenberg/elle-frankenberg-portfolio/main/app/lib/mainContent.json?token=${process.env.MAIN_CONTENT_TOKEN}`;
 
   try {
-    // Fetch the JSON file from GitHub
     const response = await fetch(URL);
 
     // Check if the response is okay (status code 200)

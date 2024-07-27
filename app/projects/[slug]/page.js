@@ -31,7 +31,7 @@ import InformationList from "../components/InformationList";
 import { Suspense } from "react";
 
 export default async function ProjectPage({ params: { slug } }) {
-  const URL = process.env.PROJECTS_URL;
+  const URL = `https://raw.githubusercontent.com/ElleFrankenberg/elle-frankenberg-portfolio/main/app/lib/projects.json?token=${process.env.PROJECTS_TOKEN}`;
 
   try {
     // Fetch the JSON file from GitHub
