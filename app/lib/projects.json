@@ -56,14 +56,11 @@
     {
       "id": "francisca-khamis_04",
       "title": "francisca khamis Giacoman - portfolio",
-      "slug": "francisca-khamis",
+      "slug": "francisca-khamis-giacoman-portfolio",
       "cover": "https://res.cloudinary.com/mittbildmoln/image/upload/v1719067796/portfolio/francisca-Khamis_gvmis7.png",
       "year": "2023",
       "description": "Portfolio of performance and installation artist Francisca Khamis Giacoman. The site is responsive, multilingual, and built with Next.js using the Pages Router. It fetches data from endpoints provided by Kirby Headless CMS.",
-      "urls": [
-        "https://queer-speed-dating.vercel.app/",
-        "https://github.com/ElleFrankenberg/queer-speed-dating"
-      ],
+      "urls": ["https://franciscakhamis.com/"],
       "technologies": [
         "Next.js,",
         "React,",

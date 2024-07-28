@@ -1,13 +1,26 @@
 import ProjectsList from "./components/ProjectsList";
-
-import { promises as fs } from "fs";
+import { fetchData } from "../../lib/fetchData";
 
 export default async function ProjectsPage() {
-  const file = await fs.readFile(
-    process.cwd() + "/app/lib/projects.json",
-    "utf8"
-  );
-  const projects = JSON.parse(file);
+  try {
+    const projects = await fetchData("projects");
 
-  return <main>{<ProjectsList projects={projects.projects} />}</main>;
+    if (!projects) {
+      throw new Error(`Not found`);
+    }
+
+    console.log(projects);
+
+    return (
+      <main>
+        <ProjectsList projects={projects} />
+      </main>
+    );
+  } catch (error) {
+    return (
+      <main>
+        <p>Error loading projects.</p>
+      </main>
+    );
+  }
 }
