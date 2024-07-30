@@ -1,7 +1,16 @@
 "use client";
 import ReactPlayer from "react-player";
+import { useState } from "react";
 
 const ProjectVideo = ({ video }) => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <section className="bg-darkBlue flex items-center justify-center mr-[15px] ml-[16px]">
       <figure className="max-h-[70vh] p-sm aspect-video  flex items-center justify-center">
