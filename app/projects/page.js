@@ -9,8 +9,6 @@ export default async function ProjectsPage() {
       throw new Error(`Not found`);
     }
 
-    console.log(projects);
-
     return (
       <main>
         <ProjectsList projects={projects} />

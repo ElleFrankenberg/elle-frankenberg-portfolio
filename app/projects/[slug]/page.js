@@ -1,5 +1,6 @@
 import InformationList from "../components/InformationList";
 import ProjectVideo from "../components/ProjectVideo";
+import ProjectSwiper from "../components/ProjectSwiper";
 import { fetchProject } from "../../../lib/fetchProject";
 
 export default async function ProjectPage({ params: { slug } }) {
@@ -11,8 +12,9 @@ export default async function ProjectPage({ params: { slug } }) {
     }
 
     return (
-      <main className="project">
-        <ProjectVideo />
+      <main className="project ">
+        {project.video && <ProjectVideo video={project.video} />}
+        {project.images && <ProjectSwiper images={project.images} />}
         <InformationList projectInfo={project} />
       </main>
     );

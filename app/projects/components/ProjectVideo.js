@@ -1,10 +1,20 @@
+"use client";
+import ReactPlayer from "react-player";
+
 const ProjectVideo = ({ video }) => {
-  console.log(video);
   return (
-    <section className="p-sm min-h-[50vh] bg-lightBlue relative">
-      <div className="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4">
-        hej
-      </div>
+    <section className="bg-darkBlue flex items-center justify-center mr-[15px] ml-[16px]">
+      <figure className="max-h-[70vh] p-sm aspect-video  flex items-center justify-center">
+        <ReactPlayer
+          width="90%"
+          height="auto"
+          muted={true}
+          onReady={() => true}
+          playing={true}
+          loop={true}
+          url={video}
+        />
+      </figure>
     </section>
   );
 };
