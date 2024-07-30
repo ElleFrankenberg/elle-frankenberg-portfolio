@@ -1,6 +1,6 @@
 "use client";
 import ReactPlayer from "react-player";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const ProjectVideo = ({ video }) => {
   const [mounted, setMounted] = useState(false);
