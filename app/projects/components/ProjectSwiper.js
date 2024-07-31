@@ -72,7 +72,7 @@ const ProjectSwiper = ({ images }) => {
   }, []);
 
   return (
-    <section className="pt-sm pb-sm md:pt-md md:pb-md relative mr-[15px] ml-[17px] overflow-hidden">
+    <section className="pt-sm pb-sm md:pt-md md:pb-md relative mr-[15px] ml-[16px] overflow-hidden">
       <Swiper
         loop={true}
         speed={0}
@@ -93,7 +93,7 @@ const ProjectSwiper = ({ images }) => {
                 width="1200"
                 height="1200"
                 className="w-full md:w-[70%] h-full object-contain"
-                alt={`Slide image ${index}`}
+                alt={`Project image ${index}`}
               />
             </figure>
           </SwiperSlide>

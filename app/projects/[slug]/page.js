@@ -2,6 +2,7 @@ import InformationList from "../components/InformationList";
 import ProjectVideo from "../components/ProjectVideo";
 import ProjectSwiper from "../components/ProjectSwiper";
 import { fetchProject } from "../../../lib/fetchProject";
+import ProjectCoverImage from "../components/ProjectCoverImage";
 
 export default async function ProjectPage({ params: { slug } }) {
   try {
@@ -13,8 +14,9 @@ export default async function ProjectPage({ params: { slug } }) {
 
     return (
       <main className="project ">
-        {project.video && <ProjectVideo video={project.video} />}
-        {project.images && <ProjectSwiper images={project.images} />}
+        {/* {project.video && <ProjectVideo video={project.video} />}
+        {project.images && <ProjectSwiper images={project.images} />} */}
+        <ProjectCoverImage image={project.cover} />
         <InformationList projectInfo={project} />
       </main>
     );

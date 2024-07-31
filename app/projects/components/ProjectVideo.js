@@ -23,6 +23,7 @@ const ProjectVideo = ({ video }) => {
           playing={true}
           loop={true}
           url={video}
+          playsinline={true}
         />
       </figure>
     </section>
