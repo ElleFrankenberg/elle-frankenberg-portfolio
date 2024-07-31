@@ -66,10 +66,6 @@ h3 {
   line-height: normal;
 }
 
-/* p {
-  font-family: "EB Garamond12", serif;
-} */
-
 a {
   cursor: pointer;
 }
@@ -186,23 +182,42 @@ a {
   }
 }
 
-/* CV list animation */
+/* Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+    width: 50% !important;
+    height: 100% !important;
+    top: 1.2rem !important;
+    right: 0 !important;
+    cursor: pointer;
+  }
 
-/* .cv-list-enter {
-  max-height: 0;
-  transition: max-height 0.7s ease-out;
-  overflow: hidden;
+  .swiper-button-next {
+    justify-content: end !important;
+  }
+
+  .swiper-button-prev {
+    left: 0 !important;
+    right: auto;
+    justify-content: start !important;
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    color: var(--darkBlue);
+    font-size: 30px !important;
+    text-transform: none !important;
+    letter-spacing: 0;
+    text-transform: none;
+    font-variant: initial;
+    line-height: 1;
+    border-radius: 50%;
+    margin-left: var(--main-gap);
+  }
 }
-.cv-list-enter-active {
-  max-height: 100vh;
-  transition: max-height 0.7s ease-in;
-}
-.cv-list-exit {
-  max-height: 100vh;
-  transition: max-height 0.7s ease-in;
-}
-.cv-list-exit-active {
-  max-height: 0;
-  transition: max-height 0.7s ease-out;
-  overflow: hidden;
-} */

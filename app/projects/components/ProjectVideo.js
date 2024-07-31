@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 const ProjectVideo = ({ video }) => {
   const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
