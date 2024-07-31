@@ -14,7 +14,7 @@ const ProjectCard = ({
   return (
     <li key={id} className="costum-grid-card p-sm ">
       <Link className="flex flex-col min-h-full" href={`/projects/${slug}`}>
-        <figure className="aspect-square flex items-center">
+        <figure className="sm:aspect-square flex items-center">
           <Image
             width={600}
             height={800}
