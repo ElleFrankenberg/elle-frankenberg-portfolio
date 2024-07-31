@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 
 const Footer = () => {
   const footerRef = useRef();
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const setFooterHeight = (footer) => {
@@ -21,7 +22,7 @@ const Footer = () => {
 
   return (
     <footer ref={footerRef} className="p-sm">
-      footer
+      <small>&copy; Copyright {currentYear}, Elle Frankenberg</small>
     </footer>
   );
 };
