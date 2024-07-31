@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="p-sm border-b border-b-darkBlue sticky top-0 z-10 bg-white mr-[15px] ml-[16px]"
+      className="pr-sm pt-sm pb-sm border-b border-b-darkBlue sticky top-0 z-10 bg-white mr-[15px] ml-[16px]"
     >
       <nav>
         <ul className="flex gap-4 font-bold text-reg uppercase">

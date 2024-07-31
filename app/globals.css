@@ -187,6 +187,7 @@ a {
 .swiper-button-prev {
   display: none !important;
 }
+
 @media (min-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
