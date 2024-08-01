@@ -53,8 +53,7 @@ import Image from "next/image";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "swiper/css/autoplay";
 
 const ProjectSwiper = ({ images }) => {
   const [isMobile, setIsMobile] = useState(false);
@@ -72,34 +71,59 @@ const ProjectSwiper = ({ images }) => {
   }, []);
 
   return (
-    <section className=" pt-sm pb-sm md:pt-md md:pb-md relative mr-[15px] ml-[16px] overflow-hidden">
-      <Swiper
-        loop={true}
-        speed={0}
-        centeredSlides={true}
-        modules={[Navigation, Autoplay]}
-        spaceBetween={10}
-        slidesPerView={1}
-        navigation
-        // autoplay={
-        //   isMobile ? { delay: 2500, disableOnInteraction: false } : false
-        // }
-      >
-        {images.map((imageUrl, index) => (
-          <SwiperSlide className="" key={index}>
-            <figure className="md:h-[70vh] w-full flex justify-center items-center">
-              <Image
-                src={imageUrl}
-                width="1200"
-                height="1200"
-                className="w-full md:w-[70%] h-full object-contain"
-                alt={`Project image ${index}`}
-              />
-            </figure>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </section>
+    <>
+      <section className="swiper-desktop pt-sm pb-sm pt-md pb-md relative mr-[15px] ml-[16px] overflow-hidden">
+        <Swiper
+          loop={true}
+          speed={500}
+          centeredSlides={true}
+          modules={[Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+        >
+          {images.map((imageUrl) => (
+            <SwiperSlide className="" key={images.length}>
+              <figure className="h-[70vh] w-full flex justify-center items-center">
+                <Image
+                  src={imageUrl}
+                  width="1200"
+                  height="1200"
+                  className="w-[70%] h-full object-contain"
+                  alt={`Project image ${images.length}`}
+                />
+              </figure>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+
+      <section className="swiper-mobile pt-sm pb-sm  relative mr-[15px] ml-[16px] overflow-hidden">
+        <Swiper
+          loop={true}
+          speed={500}
+          centeredSlides={true}
+          modules={[Autoplay]}
+          spaceBetween={10}
+          slidesPerView={1}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+        >
+          {images.map((imageUrl) => (
+            <SwiperSlide key={images.length}>
+              <figure className=" w-full flex justify-center items-center">
+                <Image
+                  src={imageUrl}
+                  width="1200"
+                  height="1200"
+                  className="w-full  h-full object-contain"
+                  alt={`Project image ${images.length}`}
+                />
+              </figure>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </section>
+    </>
   );
 };
 
