@@ -86,14 +86,14 @@ const ProjectSwiper = ({ images }) => {
 
       <section className="h-full swiper-mobile pt-sm relative mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
-          className="h-full w-full"
+          className="max-h-[50vh] w-full"
           loop={true}
           speed={500}
           centeredSlides={true}
           modules={[Autoplay]}
           spaceBetween={10}
           slidesPerView={1}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
         >
           {images.map((imageUrl) => (
             <SwiperSlide key={imageUrl}>
