@@ -188,6 +188,14 @@ a {
   display: none;
 }
 
+.swiper {
+  max-height: 100% !important;
+}
+
+.swiper-wrapper {
+  max-height: 100% !important;
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   display: flex !important;

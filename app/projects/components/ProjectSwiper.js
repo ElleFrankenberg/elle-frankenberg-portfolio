@@ -84,9 +84,9 @@ const ProjectSwiper = ({ images }) => {
         </Swiper>
       </section>
 
-      <section className="h-full swiper-mobile pt-sm relative mr-[15px] ml-[16px] overflow-hidden">
+      <section className="max-h-[70vh] swiper-mobile pt-sm  mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
-          className="max-h-[50vh] w-full"
+          className="h-full w-full"
           loop={true}
           speed={500}
           centeredSlides={true}
