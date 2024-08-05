@@ -56,20 +56,6 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 const ProjectSwiper = ({ images }) => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize(); // Check on mount
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <section className="swiper-desktop pt-sm pb-sm pt-md pb-md relative mr-[15px] ml-[16px] overflow-hidden">
@@ -98,7 +84,7 @@ const ProjectSwiper = ({ images }) => {
         </Swiper>
       </section>
 
-      <section className="h-[50vh] w-full swiper-mobile pt-sm pb-sm relative mr-[15px] ml-[16px] overflow-hidden">
+      <section className="h-full swiper-mobile pt-sm relative mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
           className="h-full w-full"
           loop={true}
