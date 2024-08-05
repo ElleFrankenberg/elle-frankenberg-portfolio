@@ -83,7 +83,7 @@ const ProjectSwiper = ({ images }) => {
           navigation
         >
           {images.map((imageUrl) => (
-            <SwiperSlide className="" key={images.length}>
+            <SwiperSlide className="" key={imageUrl}>
               <figure className="h-[70vh] w-full flex justify-center items-center">
                 <Image
                   src={imageUrl}
@@ -98,19 +98,20 @@ const ProjectSwiper = ({ images }) => {
         </Swiper>
       </section>
 
-      <section className="swiper-mobile pt-sm pb-sm  relative mr-[15px] ml-[16px] overflow-hidden">
+      <section className="h-[50vh] w-full swiper-mobile pt-sm pb-sm relative mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
+          className="h-full w-full"
           loop={true}
           speed={500}
           centeredSlides={true}
           modules={[Autoplay]}
           spaceBetween={10}
           slidesPerView={1}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          //   autoplay={{ delay: 3000, disableOnInteraction: false }}
         >
           {images.map((imageUrl) => (
-            <SwiperSlide key={images.length}>
-              <figure className=" w-full flex justify-center items-center">
+            <SwiperSlide key={imageUrl}>
+              <figure className="h-full w-full flex justify-center items-center">
                 <Image
                   src={imageUrl}
                   width="1200"

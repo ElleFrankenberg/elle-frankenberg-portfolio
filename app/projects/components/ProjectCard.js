@@ -1,16 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const ProjectCard = ({
-  id,
-  cover,
-  title,
-  slug,
-  year,
-  description,
-  technologies,
-  url,
-}) => {
+const ProjectCard = ({ id, cover, title, slug, year }) => {
   return (
     <li key={id} className="costum-grid-card p-sm ">
       <Link className="flex flex-col min-h-full" href={`/projects/${slug}`}>
@@ -29,9 +20,6 @@ const ProjectCard = ({
           <h2 className="font-bold text-reg uppercase text-darkBlue">
             {title}
           </h2>
-          {/* <div className=" uppercase text-xsm">
-          </div>
-          <h2 className="leading-[1.2] text-reg-serif font-serif">{title}</h2> */}
         </div>
       </Link>
     </li>

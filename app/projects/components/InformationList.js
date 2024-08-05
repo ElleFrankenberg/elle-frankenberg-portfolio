@@ -50,7 +50,7 @@ const InformationList = ({ projectInfo }) => {
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
         <ul className="flex ">
           {projectInfo.urls[0] && (
-            <li className="mr-sm">
+            <li className="mr-sm" key={projectInfo.urls[0]}>
               <a
                 target="_blank"
                 className="hover:text-darkBlue"
@@ -61,7 +61,7 @@ const InformationList = ({ projectInfo }) => {
             </li>
           )}
           {projectInfo.urls[1] && (
-            <li>
+            <li key={projectInfo.urls[1]}>
               <a
                 target="_blank"
                 className="hover:text-darkBlue"
