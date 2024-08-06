@@ -185,15 +185,19 @@ a {
 /* Swiper */
 
 .swiper-desktop {
-  display: none;
+  /* display: none; */
 }
 
 .swiper {
-  max-height: 100% !important;
+  height: 100% !important;
 }
 
 .swiper-wrapper {
-  max-height: 100% !important;
+  height: 100% !important;
+}
+
+.swiper-slide {
+  display: flex !important;
 }
 
 .swiper-button-next,
@@ -250,11 +254,11 @@ a {
 }
 
 @media (min-width: 768px) {
-  .swiper-mobile {
+  /* .swiper-mobile {
     display: none;
   }
 
   .swiper-desktop {
     display: block;
-  }
+  } */
 }

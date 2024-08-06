@@ -58,7 +58,7 @@ import "swiper/css/autoplay";
 const ProjectSwiper = ({ images }) => {
   return (
     <>
-      <section className="swiper-desktop pt-sm pb-sm pt-md pb-md relative mr-[15px] ml-[16px] overflow-hidden">
+      <section className="swiper-desktop h-[40vh] md:h-[70vh]  pt-sm pb-sm pt-md pb-md relative mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
           loop={true}
           speed={500}
@@ -69,22 +69,25 @@ const ProjectSwiper = ({ images }) => {
           navigation
         >
           {images.map((imageUrl) => (
-            <SwiperSlide className="" key={imageUrl}>
-              <figure className="h-[70vh] w-full flex justify-center items-center">
-                <Image
-                  src={imageUrl}
-                  width="1200"
-                  height="1200"
-                  className="w-[70%] h-full object-contain"
-                  alt={`Project image ${images.length}`}
-                />
-              </figure>
+            <SwiperSlide
+              className="w-full flex justify-center items-center"
+              key={imageUrl}
+            >
+              {/* <figure className=" w-full flex justify-center items-center"> */}
+              <Image
+                src={imageUrl}
+                width="1200"
+                height="1200"
+                className="w-[75%] h-full object-contain"
+                alt={`Project image ${images.length}`}
+              />
+              {/* </figure> */}
             </SwiperSlide>
           ))}
         </Swiper>
       </section>
 
-      <section className="max-h-[70vh] swiper-mobile pt-sm  mr-[15px] ml-[16px] overflow-hidden">
+      {/* <section className="max-h-[70vh] swiper-mobile pt-sm  mr-[15px] ml-[16px] overflow-hidden">
         <Swiper
           className="h-full w-full"
           loop={true}
@@ -97,19 +100,19 @@ const ProjectSwiper = ({ images }) => {
         >
           {images.map((imageUrl) => (
             <SwiperSlide key={imageUrl}>
-              {/* <figure className="h-full w-full flex justify-center items-center"> */}
-              <Image
-                src={imageUrl}
-                width="1200"
-                height="1200"
-                className="w-full h-full object-contain"
-                alt={`Project image ${images.length}`}
-              />
-              {/* </figure> */}
+              <figure className="h-full w-full flex justify-center items-center">
+                <Image
+                  src={imageUrl}
+                  width="1200"
+                  height="1200"
+                  className="w-full  h-full object-contain"
+                  alt={`Project image ${images.length}`}
+                />
+              </figure>
             </SwiperSlide>
           ))}
         </Swiper>
-      </section>
+      </section> */}
     </>
   );
 };
