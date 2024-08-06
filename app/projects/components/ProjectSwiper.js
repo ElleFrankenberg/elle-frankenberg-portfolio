@@ -97,15 +97,15 @@ const ProjectSwiper = ({ images }) => {
         >
           {images.map((imageUrl) => (
             <SwiperSlide key={imageUrl}>
-              <figure className="h-full w-full flex justify-center items-center">
-                <Image
-                  src={imageUrl}
-                  width="1200"
-                  height="1200"
-                  className="w-full  h-full object-contain"
-                  alt={`Project image ${images.length}`}
-                />
-              </figure>
+              {/* <figure className="h-full w-full flex justify-center items-center"> */}
+              <Image
+                src={imageUrl}
+                width="1200"
+                height="1200"
+                className="w-full h-full object-contain"
+                alt={`Project image ${images.length}`}
+              />
+              {/* </figure> */}
             </SwiperSlide>
           ))}
         </Swiper>
