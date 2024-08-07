@@ -17,7 +17,7 @@ const Introduction = ({
 }) => {
   return (
     <>
-      <section className="costum-grid p-0 grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-1  relative">
+      <section className="costum-grid  grid-cols-1 lg:grid-cols-2 xxl:grid-cols-1 ">
         <div className="costum-grid-card p-sm pt-lg justify-center md:flex md:flex-col md:items-center">
           <div className="md:flex items-center justify-center">
             <Image

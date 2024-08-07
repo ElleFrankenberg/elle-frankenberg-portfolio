@@ -40,7 +40,7 @@
   --gap-small: 1rem;
   --gap-medium: 3rem;
   --border: 1px solid var(--color-black);
-  --line-gap: 0.9rem;
+  --line-gap: 1rem;
 }
 
 html {
@@ -50,8 +50,14 @@ html {
 body {
   font-size: var(--main-font-size);
   font-family: "Satoshi", sans-serif;
-  max-width: 120rem;
-  margin: 0 auto;
+  /* max-width: 120rem;
+  margin: 0 auto; */
+  margin: auto;
+  overflow-x: hidden;
+}
+
+main {
+  background-size: 100% 100%;
 }
 
 h1 {
@@ -77,14 +83,20 @@ a {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
+.costum-grid {
+  display: grid;
+  position: relative;
+  padding: 0;
+}
+
 .costum-grid::before,
 .costum-grid::after {
   position: absolute;
   content: "";
   border: var(--line-gap) solid var(--white);
-  height: calc(100% - 1px);
+  height: calc(100% - 2px);
   top: 1px;
-  width: calc(100% + 1px);
+  width: calc(100% + 2px);
   z-index: 1;
   pointer-events: none;
   left: 0;
@@ -184,16 +196,12 @@ a {
 
 /* Swiper */
 
-.swiper-desktop {
-  /* display: none; */
-}
-
 .swiper {
   height: 100% !important;
 }
 
 .swiper-wrapper {
-  height: 100% !important;
+  max-height: 100% !important;
 }
 
 .swiper-slide {
@@ -251,14 +259,4 @@ a {
   100% {
     transform: rotate(360deg);
   }
-}
-
-@media (min-width: 768px) {
-  /* .swiper-mobile {
-    display: none;
-  }
-
-  .swiper-desktop {
-    display: block;
-  } */
 }

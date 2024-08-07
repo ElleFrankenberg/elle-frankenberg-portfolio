@@ -43,6 +43,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         "project-list": "repeat(auto-fill, minmax(320px, 1fr))",
+        "project-list-mobile": "1fr 1fr",
       },
     },
     screens: {
