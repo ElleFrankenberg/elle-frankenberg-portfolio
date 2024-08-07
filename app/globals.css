@@ -40,7 +40,7 @@
   --gap-small: 1rem;
   --gap-medium: 3rem;
   --border: 1px solid var(--color-black);
-  --line-gap: 1rem;
+  --line-gap: 0.9rem;
 }
 
 html {
@@ -82,9 +82,9 @@ a {
   position: absolute;
   content: "";
   border: var(--line-gap) solid var(--white);
-  height: calc(100% - 2px);
+  height: calc(100% - 1px);
   top: 1px;
-  width: calc(100% + 2px);
+  width: calc(100% + 1px);
   z-index: 1;
   pointer-events: none;
   left: 0;

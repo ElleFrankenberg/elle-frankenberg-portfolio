@@ -53,7 +53,7 @@ const InformationList = ({ projectInfo }) => {
             <li className="mr-sm" key={projectInfo.urls[0]}>
               <a
                 target="_blank"
-                className="hover:text-darkBlue"
+                className="inline-block p-1 bg-darkBlue text-white "
                 href={projectInfo.urls[0]}
               >
                 Live Demo
@@ -64,8 +64,8 @@ const InformationList = ({ projectInfo }) => {
             <li key={projectInfo.urls[1]}>
               <a
                 target="_blank"
-                className="hover:text-darkBlue"
-                href={projectInfo.urls[0]}
+                className="inline-block p-1 bg-darkPink text-white "
+                href={projectInfo.urls[1]}
               >
                 View the code
               </a>
