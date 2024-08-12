@@ -40,7 +40,20 @@
   --gap-small: 1rem;
   --gap-medium: 3rem;
   --border: 1px solid var(--color-black);
-  --line-gap: 1rem;
+  --line-gap: 0.5rem;
+  --main-padding: calc(var(--main-font-size) / 1.5);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --main-padding: calc(var(--main-font-size) / 1.5);
+    --main-font-size: 20px;
+    --aspect-ratio: 3/2;
+    --overview-font-extra: 2rem;
+    --overview-font-big: 1.33rem;
+    --overview-font-normal: 1rem;
+    --overview-font-small: 0.75rem;
+  }
 }
 
 html {
@@ -58,6 +71,8 @@ body {
 
 main {
   background-size: 100% 100%;
+  display: block;
+  padding: 0;
 }
 
 h1 {
@@ -83,13 +98,14 @@ a {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
-.costum-grid {
+/* .costum-grid {
   display: grid;
   position: relative;
   padding: 0;
-}
+  gap: 3px;
+} */
 
-.costum-grid::before,
+/* .costum-grid::before,
 .costum-grid::after {
   position: absolute;
   content: "";
@@ -129,7 +145,7 @@ a {
   left: calc(var(--line-gap) + 1px);
   width: calc(100% - calc(var(--line-gap) * 2));
   height: 1px;
-}
+} */
 
 /* target :nth-child() */
 .tech-list li:nth-child(3),
@@ -182,16 +198,6 @@ a {
   background-color: var(--white);
   color: var(--black);
   min-height: 100vh;
-}
-
-@media (min-width: 768px) {
-  .popup-content {
-    top: 1rem;
-    bottom: 1rem;
-    width: 100%;
-    max-width: 60rem;
-    min-height: unset;
-  }
 }
 
 /* Swiper */
@@ -258,5 +264,108 @@ a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+.costum-grid {
+  padding: 0;
+  gap: 3px;
+  position: relative;
+  width: 100%;
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.costum-grid-card {
+  border: none;
+  padding: 1rem;
+  position: relative;
+}
+
+.costum-grid-card:nth-child(odd)::before {
+  position: absolute;
+  content: "";
+  background-color: var(--darkBlue);
+  width: 1px;
+  height: calc(100% - calc(var(--line-gap) * 2));
+  top: calc(var(--line-gap) + 1px);
+  right: -1px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.costum-grid-card::after {
+  position: absolute;
+  content: "";
+  background-color: var(--darkBlue);
+
+  z-index: 1;
+  pointer-events: none;
+  bottom: -1px;
+  left: calc(var(--line-gap) + 1px);
+  width: calc(100% - calc(var(--line-gap) * 2));
+  height: 1px;
+}
+@media screen and (min-width: 767px) {
+  .costum-grid {
+    padding: 0;
+    gap: 3px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    border-bottom: thin solid var(--color-black);
+  }
+
+  .costum-grid::before,
+  .costum-grid::after {
+    position: absolute;
+    content: "";
+    border: var(--line-gap) solid var(--white);
+    height: calc(100% - 2px);
+    top: 1px;
+    width: calc(100% + 2px);
+    z-index: 1;
+    pointer-events: none;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  .costum-grid-card {
+    padding: var(--main-padding);
+    border-bottom: var(--border);
+    position: relative;
+  }
+
+  .costum-grid-card::before,
+  .costum-grid-card::after {
+    position: absolute;
+    content: "";
+    background-color: var(--darkBlue);
+    width: 1px;
+    height: calc(100% - calc(var(--line-gap) * 2));
+    top: calc(var(--line-gap) + 1px);
+    right: -1px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .costum-grid-card::after {
+    bottom: -1px;
+    top: unset;
+    right: unset;
+    left: calc(var(--line-gap) + 1px);
+    width: calc(100% - calc(var(--line-gap) * 2));
+    height: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .popup-content {
+    top: 1rem;
+    bottom: 1rem;
+    width: 100%;
+    max-width: 60rem;
+    min-height: unset;
   }
 }

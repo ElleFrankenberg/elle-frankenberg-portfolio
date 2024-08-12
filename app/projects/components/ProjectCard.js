@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const ProjectCard = ({ id, cover, title, slug, year }) => {
   return (
-    <li key={id} className="costum-grid-card p-sm max-w-full">
+    <li key={id} className="costum-grid-card">
+      {/* <li key={id} className="costum-grid-card p-sm max-w-full"> */}
       <Link className="flex flex-col min-h-full" href={`/projects/${slug}`}>
         <figure className="sm:aspect-square flex items-center">
           <Image
