@@ -5,8 +5,7 @@ const ProjectsList = ({ projects }) => {
 
   return (
     <>
-      <ul className="costum-grid">
-        {/* <ul className="costum-grid grid-cols-project-list-mobile w-full ml-0  md:grid-cols-project-list "> */}
+      <ul className="grid-projects">
         {projects.map((project) => (
           <ProjectCard
             id={project._id.toString()}

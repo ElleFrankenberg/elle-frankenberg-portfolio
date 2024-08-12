@@ -17,8 +17,8 @@ const Introduction = ({
 }) => {
   return (
     <>
-      <section className="costum-grid-intro grid grid-cols-1 lg:grid-cols-2 xxl:grid-cols-1 ">
-        <div className="costum-grid-card-intro p-sm pt-lg justify-center md:flex md:flex-col md:items-center">
+      <section className="grid-intro grid lg:grid-cols-2 xxl:grid-cols-1 ">
+        <div className="grid-intro-card p-sm pt-lg justify-center md:flex md:flex-col md:items-center">
           <div className="md:flex items-center justify-center">
             <Image
               className="mx-auto rounded-full md:mr-md lg:w-[9.3rem] lg:h-[9.3rem]"
@@ -58,7 +58,7 @@ const Introduction = ({
             <SocialLinkList socialLinks={socialLinks} />
           </ul>
         </div>
-        <div className="costum-grid-card-intro p-sm">
+        <div className="grid-intro-card p-sm">
           <section className="min-h-[50dvh] h-full flex flex-col items-center justify-around xxl:flex-row xxl:min-h-[unset] xxl:pt-lg xxl:pb-lg">
             <TechList tech={tech} />
             <SkillList skills={skills} />
