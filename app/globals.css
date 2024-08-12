@@ -288,7 +288,7 @@ a {
   content: "";
   background-color: var(--darkBlue);
   width: 1px;
-  height: calc(100% - calc(var(--line-gap) * 2));
+  height: calc(100% - calc(var(--line-gap) + 9px));
   top: calc(var(--line-gap) + 1px);
   right: -1px;
   z-index: 1;
@@ -310,7 +310,7 @@ a {
 @media screen and (min-width: 767px) {
   .costum-grid {
     padding: 0;
-    gap: 3px;
+    /* gap: 3px; */
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -355,7 +355,7 @@ a {
     top: unset;
     right: unset;
     left: calc(var(--line-gap) + 1px);
-    width: calc(100% - calc(var(--line-gap) * 2));
+    width: calc(100% - calc(var(--line-gap) + 12px));
     height: 1px;
   }
 }
