@@ -304,13 +304,14 @@ a {
   pointer-events: none;
   bottom: -1px;
   left: calc(var(--line-gap) + 1px);
-  width: calc(100% - calc(var(--line-gap) * 2));
+  width: calc(100% - calc(var(--line-gap) + 12px));
   height: 1px;
 }
+
 @media screen and (min-width: 767px) {
   .costum-grid {
     padding: 0;
-    /* gap: 3px; */
+    gap: 3px;
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
