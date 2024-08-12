@@ -98,35 +98,27 @@ a {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 
-/* .costum-grid {
-  display: grid;
+.costum-grid-intro {
+  /* display: grid;
   position: relative;
   padding: 0;
+  gap: 3px; */
+  padding: 0;
   gap: 3px;
-} */
-
-/* .costum-grid::before,
-.costum-grid::after {
-  position: absolute;
-  content: "";
-  border: var(--line-gap) solid var(--white);
-  height: calc(100% - 2px);
-  top: 1px;
-  width: calc(100% + 2px);
-  z-index: 1;
-  pointer-events: none;
-  left: 0;
-  box-sizing: border-box;
-}
-
-.costum-grid-card {
-  border: none;
   position: relative;
-  border-bottom: var(--border);
+  width: 100%;
+  margin-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.costum-grid-card::before,
-.costum-grid-card::after {
+.costum-grid-card-intro {
+  border: none;
+  padding: 1rem;
+  position: relative;
+}
+
+.costum-grid-card-intro::after {
   position: absolute;
   content: "";
   background-color: var(--darkBlue);
@@ -138,7 +130,61 @@ a {
   pointer-events: none;
 }
 
-.costum-grid-card::after {
+.costum-grid-card-intro::after {
+  bottom: -1px;
+  top: unset;
+  right: unset;
+  left: calc(var(--line-gap) + 1px);
+  width: calc(100% - calc(var(--line-gap) * 2));
+  height: 1px;
+}
+
+/* .costum-grid-card-intro:nth-child(odd)::before {
+  position: absolute;
+  content: "";
+  background-color: var(--darkBlue);
+  width: 1px;
+  height: calc(100% - calc(var(--line-gap) + 9px));
+  top: calc(var(--line-gap) + 1px);
+  right: -1px;
+  z-index: 1;
+  pointer-events: none;
+} */
+
+/* .costum-grid-intro::before,
+.costum-grid-intro::after {
+  position: absolute;
+  content: "";
+  border: var(--line-gap) solid var(--white);
+  height: calc(100% - 2px);
+  top: 1px;
+  width: calc(100% + 2px);
+  z-index: 1;
+  pointer-events: none;
+  left: 0;
+  box-sizing: border-box;
+} */
+
+/* .costum-grid-card-intro {
+  border: none;
+  position: relative;
+  border-bottom: var(--border);
+} */
+
+/* .costum-grid-card-intro::before,
+.costum-grid-card-intro::after {
+  position: absolute;
+  content: "";
+  background-color: var(--darkBlue);
+  width: 1px;
+  height: calc(100% - calc(var(--line-gap) * 2));
+  top: calc(var(--line-gap) + 1px);
+  right: -1px;
+  z-index: 1;
+  pointer-events: none;
+} */
+
+/* .costum-grid-card-intro::after {
   bottom: -1px;
   top: unset;
   right: unset;
