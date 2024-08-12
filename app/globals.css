@@ -122,20 +122,13 @@ a {
   position: absolute;
   content: "";
   background-color: var(--darkBlue);
-  width: 1px;
-  height: calc(100% - calc(var(--line-gap) * 2));
-  top: calc(var(--line-gap) + 1px);
-  right: -1px;
   z-index: 1;
   pointer-events: none;
-}
-
-.costum-grid-card-intro::after {
   bottom: -1px;
   top: unset;
   right: unset;
   left: calc(var(--line-gap) + 1px);
-  width: calc(100% - calc(var(--line-gap) * 2));
+  width: calc(100% - calc(var(--line-gap) + 12px));
   height: 1px;
 }
 
