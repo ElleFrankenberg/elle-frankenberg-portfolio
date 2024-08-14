@@ -24,13 +24,22 @@ const CvModal = ({ cv }) => {
       <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
         <section className="h-[92vh] overflow-auto">
           <header className="border-b border-b-darkBlue pb-sm flex items-center">
+            <h2> Download CV</h2>
             <a
-              href="/Elle_Frankenberg_CV_en.pdf"
-              download="Elle_Frankenberg_CV_en.pdf"
-              className="flex items-center hover:text-darkBlue"
+              href="/Elle_Frankenberg_CV_eng.pdf"
+              download="Elle_Frankenberg_CV_eng.pdf"
+              className="flex items-center hover:text-darkBlue ml-3"
             >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
-              Download CV
+              Eng
+            </a>
+            <a
+              href="/Elle_Frankenberg_CV_sve.pdf"
+              download="Elle_Frankenberg_CV_sve.pdf"
+              className="flex items-center hover:text-darkBlue ml-3"
+            >
+              <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
+              Swe
             </a>
             <IoCloseCircle
               onClick={closeModal}
