@@ -17,7 +17,6 @@ export default async function ProjectPage({ params: { slug } }) {
         {project.image && <ProjectCoverImage image={project.image} />}
         {project.images && <ProjectSwiper images={project.images} />}
         {project.video && <ProjectVideo video={project.video} />}
-
         <InformationList projectInfo={project} />
       </main>
     );

@@ -45,7 +45,7 @@ const InformationList = ({ projectInfo }) => {
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
-        Links:
+        {projectInfo.urls.length > 1 ? "Links:" : "Link:"}
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
         <ul className="flex ">

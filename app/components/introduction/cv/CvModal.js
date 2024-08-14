@@ -25,8 +25,8 @@ const CvModal = ({ cv }) => {
         <section className="h-[92vh] overflow-auto">
           <header className="border-b border-b-darkBlue pb-sm flex items-center">
             <a
-              href="/Elle_Frankenberg_CV_en.pdf"
-              download="Elle_Frankenberg_CV_en.pdf"
+              href="/Elle_Frankenberg_CV_eng.pdf"
+              download="Elle_Frankenberg_CV_eng.pdf"
               className="flex items-center hover:text-darkBlue"
             >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
