@@ -23,14 +23,23 @@ const CvModal = ({ cv }) => {
       </button>
       <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
         <section className="h-[92vh] overflow-auto">
-          <header className="border-b border-b-darkBlue pb-sm flex items-center">
+          <header className="border-b border-b-darkBlue pb-sm flex items-center ">
+            <h2>Download CV</h2>
             <a
               href="/Elle_Frankenberg_CV_eng.pdf"
               download="Elle_Frankenberg_CV_eng.pdf"
-              className="flex items-center hover:text-darkBlue"
+              className="flex items-center hover:text-darkBlue ml-3"
             >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
-              Download CV
+              Eng
+            </a>
+            <a
+              href="/Elle_Frankenberg_CV_sve.pdf"
+              download="Elle_Frankenberg_CV_sve.pdf"
+              className="flex items-center hover:text-darkBlue ml-3"
+            >
+              <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
+              Swe
             </a>
             <IoCloseCircle
               onClick={closeModal}
@@ -39,14 +48,14 @@ const CvModal = ({ cv }) => {
           </header>
           <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3 border-b border-b-darkBlue pb-sm">
             <div className="md:border-r md:border-r-darkBlue md:pr-sm md:col-span-2">
-              <h2 className="md:mt-0 font-bold leading-none">
+              <h1 className="md:mt-0 font-bold leading-none">
                 <span className="block text-medium text-darkGray">
                   {cv.name}
                 </span>
                 <span className="block text-reg text-darkBlue mt-xs ">
                   {cv.occupationTitle} | {cv.extraWorkTitle}
                 </span>
-              </h2>
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-sm mt-sm md:hidden">
                 <Contact
                   email={cv.email}
