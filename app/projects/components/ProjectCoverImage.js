@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const ProjectCoverImage = ({ image }) => {
   return (
-    <section className=" md:bg-darkBlue pt-sm md:pb-sm md:pt-md md:pb-md relative mr-[15px] ml-[16px] overflow-hidden">
+    <section className=" pt-sm md:pb-sm md:pt-md md:pb-md relative mr-[15px] ml-[16px] overflow-hidden">
       <figure className="w-full max-h-[70vh] flex justify-center items-center">
         <Image
           src={image}

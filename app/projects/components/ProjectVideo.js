@@ -28,7 +28,7 @@ const ProjectVideo = ({ video }) => {
       )}
 
       <section
-        className="bg-darkBlue flex items-center justify-center mr-[15px] ml-[16px]"
+        className=" flex items-center justify-center mr-[15px] ml-[16px]"
         style={{ display: loading ? "none" : "block" }}
       >
         <figure className=" w-full p-sm aspect-video flex items-center justify-center">

@@ -16,8 +16,10 @@ const ProjectCard = ({ id, cover, title, slug, year }) => {
         </figure>
 
         <div className="mt-2 grow flex flex-col justify-end">
-          <h3 className="font-bold text-reg uppercase text-darkGary">{year}</h3>
-          <h2 className="font-bold text-reg uppercase text-darkBlue">
+          <h3 className="font-bold text-xsm md:text-reg uppercase text-darkGary">
+            {year}
+          </h3>
+          <h2 className="font-bold text-xsm md:text-reg uppercase text-darkBlue">
             {title}
           </h2>
         </div>

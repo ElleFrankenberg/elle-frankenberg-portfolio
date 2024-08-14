@@ -238,7 +238,10 @@ a {
 /* target :nth-child() */
 .tech-list li:nth-child(3),
 .tech-list li:nth-child(5),
-.tech-list li:nth-child(10) {
+.tech-list li:nth-child(10),
+.skill-list-colored li:nth-child(1),
+.skill-list-colored li:nth-child(3),
+.skill-list-colored li:nth-child(10) {
   color: var(--white);
   padding: 0 0.5rem;
 }
@@ -250,6 +253,16 @@ a {
   background-color: var(--darkBlue);
 }
 .tech-list li:nth-child(10) {
+  background-color: var(--darkYellow);
+}
+
+.skill-list-colored li:nth-child(1) {
+  background-color: var(--darkPink);
+}
+.skill-list-colored li:nth-child(3) {
+  background-color: var(--darkBlue);
+}
+.skill-list-colored li:nth-child(10) {
   background-color: var(--darkYellow);
 }
 

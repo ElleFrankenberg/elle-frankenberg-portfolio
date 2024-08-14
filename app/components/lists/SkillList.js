@@ -6,7 +6,7 @@ const SkillList = ({ skills }) => {
           Skills
         </span>
       </h2>
-      <ul className="tech-list pt-md px-md flex flex-wrap gap-xs justify-center items-center">
+      <ul className="skill-list-colored pt-md px-md flex flex-wrap gap-xs justify-center items-center">
         {skills.map((item) => (
           <li key={item} className=" text-small">
             {item}
