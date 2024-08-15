@@ -4,6 +4,19 @@ import ProjectSwiper from "../components/ProjectSwiper";
 import { fetchProject } from "../../../lib/fetchProject";
 import ProjectCoverImage from "../components/ProjectCoverImage";
 
+export async function generateMetadata({ params: { slug } }) {
+  const project = await fetchProject("projects", slug);
+
+  if (!project) {
+    return;
+  }
+
+  return {
+    title: `Elle Frankenberg - Portfolio - ${project.title} `,
+    description: project.description,
+  };
+}
+
 export default async function ProjectPage({ params: { slug } }) {
   try {
     const project = await fetchProject("projects", slug);
