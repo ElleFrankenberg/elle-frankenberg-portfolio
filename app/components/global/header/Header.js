@@ -27,14 +27,16 @@ const Header = () => {
       ref={headerRef}
       className="pr-sm  p-sm border-b border-b-darkBlue sticky top-0 z-10 bg-white "
     >
-      <nav>
+      <nav tabIndex="0" aria-label="Main navigation">
         <ul className="flex gap-4 font-bold text-reg uppercase">
           <li
             className={`hover:text-darkBlue ${
               pathname === "/" ? "text-darkBlue" : "text-darkGray"
             }`}
           >
-            <Link href="/">Elle Frankenberg</Link>
+            <Link href="/" aria-label="Go to Elle Frankenberg's homepage">
+              Elle Frankenberg
+            </Link>
           </li>
           <li
             className={`hover:text-darkBlue ${
@@ -44,7 +46,12 @@ const Header = () => {
                 : "text-darkGray"
             }`}
           >
-            <Link href="/projects">Projects</Link>
+            <Link
+              href="/projects"
+              aria-label="Go to Elle Frankenberg's projects"
+            >
+              Projects
+            </Link>
           </li>
         </ul>
       </nav>

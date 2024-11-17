@@ -16,12 +16,24 @@ const CvModal = ({ cv }) => {
   return (
     <>
       <button
+        aria-haspopup="dialog"
+        aria-controls="cv-modal"
+        aria-expanded={modalIsOpen ? "true" : "false"}
+        tabIndex="0"
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
         className="bg-darkGray hover:bg-darkBlue transition-colors w-[33px] h-[32px] rounded-full text-white uppercase font-bold "
       >
         CV
       </button>
-      <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
+      <Popup
+        id="cv-modal"
+        role="dialog"
+        aria-label="Elle Frankenberg's cv"
+        aria-hidden={modalIsOpen ? "false" : "true"}
+        open={modalIsOpen}
+        closeOnDocumentClick
+        onClose={closeModal}
+      >
         <section className="h-[92vh] overflow-auto">
           <header className="border-b border-b-darkBlue pb-sm flex items-center">
             <h2> Download CV</h2>
@@ -42,6 +54,13 @@ const CvModal = ({ cv }) => {
               Swe
             </a>
             <IoCloseCircle
+              role="button"
+              tabIndex="0"
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  closeModal();
+                }
+              }}
               onClick={closeModal}
               className="w-[32px] h-[32px] text-darkBlue ml-auto cursor-pointer"
             />
@@ -119,9 +138,15 @@ const CvModal = ({ cv }) => {
             </h2>
             <ExperienceList experiences={cv.educations} />
           </section>
+          <section className="pt-sm pb-sm border-b border-b-darkBlue">
+            <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
+              {cv.headlineCourses}
+            </h2>
+            <ExperienceList experiences={cv.courses} />
+          </section>
           <section className="pt-sm pb-sm">
             <h2 className="pb-sm font-bold leading-none text-medium text-darkGray">
-              Other merits
+              {cv.headlineOtherMerits}
             </h2>
             <ExperienceList experiences={cv.otherMerits} />
           </section>

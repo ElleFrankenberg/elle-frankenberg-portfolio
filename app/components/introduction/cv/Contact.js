@@ -17,7 +17,11 @@ const Contact = ({ email, phone, address, country, links }) => {
         <ul>
           {links.map((link) => (
             <li key={link.linkUrl}>
-              <Link className="hover:text-darkBlue" href={link.linkUrl}>
+              <Link
+                className="hover:text-darkBlue"
+                href={link.linkUrl}
+                aria-label={`Link to ${link.linkName}`}
+              >
                 {link.linkName}
               </Link>
             </li>
