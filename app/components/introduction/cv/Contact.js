@@ -2,14 +2,33 @@ import Link from "next/link";
 
 const Contact = ({ email, phone, address, country, links }) => {
   return (
-    <>
+    <section aria-labelledby="contact-section">
       <div>
-        <h3 className="text-reg font-bold text-darkBlue">Contact</h3>
+        <h3 id="contact-section" className="text-reg font-bold text-darkBlue">
+          Contact
+        </h3>
         <ul>
-          <li>Email: {email}</li>
-          <li>Phone: {phone}</li>
-          <li>Address: {address}</li>
-          <li>{country}</li>
+          <li className="flex flex-col">
+            <span className="mr-1">Email:</span>
+            <a
+              href={`mailto:${email}`}
+              aria-label={`Send an email to ${email}`}
+            >
+              {email}
+            </a>
+          </li>
+          <li>
+            <span className="mr-1">Phone:</span>
+            <a href={`tel:${phone}`} aria-label={`Call ${phone}`}>
+              {phone}
+            </a>
+          </li>
+          <li className="flex flex-col">
+            <span className="mr-1">Address:</span>
+            <span>
+              {address}, {country}
+            </span>
+          </li>
         </ul>
       </div>
       <div className="md:justify-self-center">
@@ -17,18 +36,20 @@ const Contact = ({ email, phone, address, country, links }) => {
         <ul>
           {links.map((link) => (
             <li key={link.linkUrl}>
-              <Link
+              <a
                 className="hover:text-darkBlue"
                 href={link.linkUrl}
-                aria-label={`Link to ${link.linkName}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Link to ${link.linkName}. This link opens in a new tab.`}
               >
                 {link.linkName}
-              </Link>
+              </a>
             </li>
           ))}
         </ul>
       </div>
-    </>
+    </section>
   );
 };
 

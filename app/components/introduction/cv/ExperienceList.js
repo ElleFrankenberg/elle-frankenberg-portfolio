@@ -22,12 +22,13 @@ const ExperienceList = ({ experiences }) => {
               <Link
                 className="hover:text-darkBlue"
                 href={experience.website[0]}
+                aria-label={`Link to ${experience.website[1]}`}
               >
                 {experience.website[1]}
               </Link>
             )}
           </div>
-          <div className="">
+          <div>
             <p className=" mt-[--gap-small] md:mt-0">
               {experience.description}
             </p>
@@ -40,7 +41,10 @@ const ExperienceList = ({ experiences }) => {
                   {experience.selectedProjects.projects.map(
                     (project, index) => (
                       <li key={index}>
-                        <Link target="_blank" href={project.url}>
+                        <Link
+                          aria-label={`Link to ${project.title}`}
+                          href={project.url}
+                        >
                           <h5 className="text-darkGray hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
                             {project.title}
                           </h5>

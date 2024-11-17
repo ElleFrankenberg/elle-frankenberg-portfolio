@@ -17,11 +17,14 @@ const Introduction = ({
 }) => {
   return (
     <>
-      <section className="grid-intro grid lg:grid-cols-2 xxl:grid-cols-1 ">
+      <section
+        className="grid-intro grid lg:grid-cols-2 xxl:grid-cols-1"
+        role="region"
+        aria-labelledby="intro-header"
+      >
         <div className="grid-intro-card p-sm pt-lg justify-center md:flex md:flex-col md:items-center">
           <div className="md:flex items-center justify-center">
             <Image
-              tabIndex="0"
               className="mx-auto rounded-full md:mr-md lg:w-[9.3rem] lg:h-[9.3rem]"
               src={profileImage}
               width={200}
@@ -29,7 +32,7 @@ const Introduction = ({
               alt="Profile picture of Elle Frankenberg"
             />
             <h1
-              tabIndex="0"
+              id="intro-header"
               className="text-center mt-sm md:mt-0 font-bold leading-none lg:text-left"
             >
               <span className="block text-medium text-darkBlue md:text-[3.5vw]">
@@ -40,8 +43,9 @@ const Introduction = ({
               </span>
             </h1>
           </div>
-          <div tabIndex="0" aria-label="Introduction text of Elle Frankenberg">
-            <p tabIndex="0" className="pt-md  max-w-[65ch]">
+          <section>
+            <h2 className="sr-only">Introduction</h2>
+            <p className="pt-md  max-w-[65ch]">
               I’m a self-motivated and creative frontend developer with a
               background in arts and motion graphic design. This background has
               given me a strong eye for detail and the ability to think outside
@@ -49,7 +53,7 @@ const Introduction = ({
               to learn by exploring new things and taking on new tasks and
               technologies.
             </p>
-            <p tabIndex="0" className="pt-md max-w-[65ch]">
+            <p className="pt-md max-w-[65ch]">
               Additionally, my years in tech have made me value structure and
               I'm always aiming to write high-quality code. Something I love
               doing together with colleagues who are just like me - positive,
@@ -57,7 +61,7 @@ const Introduction = ({
               communication skills and above all, share the same joy of writing
               really good code.
             </p>
-          </div>
+          </section>
           <ul className="py-md flex gap-4 justify-center">
             <li>
               <CvModal cv={cv} />

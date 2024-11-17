@@ -17,7 +17,7 @@ const CvModal = ({ cv }) => {
     <>
       <button
         aria-haspopup="dialog"
-        aria-controls="cv-modal"
+        aria-controls="popup-1"
         aria-expanded={modalIsOpen ? "true" : "false"}
         tabIndex="0"
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
@@ -25,56 +25,55 @@ const CvModal = ({ cv }) => {
       >
         CV
       </button>
-      <Popup
-        id="cv-modal"
-        role="dialog"
-        aria-label="Elle Frankenberg's cv"
-        aria-hidden={modalIsOpen ? "false" : "true"}
-        open={modalIsOpen}
-        closeOnDocumentClick
-        onClose={closeModal}
-      >
-        <section className="h-[92vh] overflow-auto">
-          <header className="border-b border-b-darkBlue pb-sm flex items-center">
-            <h2> Download CV</h2>
+      <Popup open={modalIsOpen} closeOnDocumentClick onClose={closeModal}>
+        <section
+          aria-label="Elle Frankenberg's cv"
+          aria-hidden={modalIsOpen ? "false" : "true"}
+          className="h-[92vh] overflow-auto"
+        >
+          <header className="border-b border-b-darkBlue pb-sm flex gap-4 flex-col md:flex-row md:items-center">
+            {/* <h2>Download CV</h2> */}
             <a
               href="/Elle_Frankenberg_CV_eng.pdf"
               download="Elle_Frankenberg_CV_eng.pdf"
-              className="flex items-center hover:text-darkBlue ml-3"
+              className="flex items-center hover:text-darkBlue  order-3"
+              aria-label="Download CV in English"
             >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
-              Eng
+              Download CV in English
             </a>
             <a
               href="/Elle_Frankenberg_CV_sve.pdf"
               download="Elle_Frankenberg_CV_sve.pdf"
-              className="flex items-center hover:text-darkBlue ml-3"
+              className="flex items-center hover:text-darkBlue  order-2"
+              aria-label="Download CV in Swedish"
             >
               <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
-              Swe
+              Download CV in Swedish
             </a>
-            <IoCloseCircle
-              role="button"
-              tabIndex="0"
+            <button
+              className="ml-auto cursor-pointer order-1 md:order-3"
+              aria-label="close modal"
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   closeModal();
                 }
               }}
               onClick={closeModal}
-              className="w-[32px] h-[32px] text-darkBlue ml-auto cursor-pointer"
-            />
+            >
+              <IoCloseCircle className="w-[32px] h-[32px] text-darkBlue " />
+            </button>
           </header>
           <section className="pt-sm grid grid-cols-1 md:grid-flow-row-dense md:grid-cols-3 border-b border-b-darkBlue pb-sm">
             <div className="md:border-r md:border-r-darkBlue md:pr-sm md:col-span-2">
-              <h2 className="md:mt-0 font-bold leading-none">
+              <h1 className="md:mt-0 font-bold leading-none">
                 <span className="block text-medium text-darkGray">
                   {cv.name}
                 </span>
                 <span className="block text-reg text-darkBlue mt-xs ">
                   {cv.occupationTitle} | {cv.extraWorkTitle}
                 </span>
-              </h2>
+              </h1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-sm mt-sm md:hidden">
                 <Contact
                   email={cv.email}
@@ -84,22 +83,25 @@ const CvModal = ({ cv }) => {
                   links={cv.links}
                 />
               </div>
-              <p className="pt-sm max-w-[65ch]">
-                I’m a self-motivated and creative frontend developer with a
-                background in arts and motion graphic design. This background
-                has given me a strong eye for detail and the ability to think
-                outside the box, transforming me into a creative problem solver
-                who loves to learn by exploring new things and taking on new
-                tasks and technologies.
-              </p>
-              <p className="pt-sm max-w-[65ch]">
-                Additionally, my years in tech have made me value structure and
-                I'm always aiming to write high-quality code. Something I love
-                doing together with colleagues who are just like me - positive,
-                easygoing and curious, with a “can-do” attitude, strong
-                communication skills and above all, share the same joy of
-                writing really good code.
-              </p>
+              <div>
+                <h2 className="sr-only">Introduction</h2>
+                <p className="pt-sm max-w-[65ch]">
+                  I’m a self-motivated and creative frontend developer with a
+                  background in arts and motion graphic design. This background
+                  has given me a strong eye for detail and the ability to think
+                  outside the box, transforming me into a creative problem
+                  solver who loves to learn by exploring new things and taking
+                  on new tasks and technologies.
+                </p>
+                <p className="pt-sm max-w-[65ch]">
+                  Additionally, my years in tech have made me value structure
+                  and I'm always aiming to write high-quality code. Something I
+                  love doing together with colleagues who are just like me -
+                  positive, easygoing and curious, with a “can-do” attitude,
+                  strong communication skills and above all, share the same joy
+                  of writing really good code.
+                </p>
+              </div>
             </div>
             <div className="hidden md:block pl-sm">
               <Contact
