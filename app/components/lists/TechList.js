@@ -1,7 +1,13 @@
 const TechList = ({ tech }) => {
   return (
-    <div className="max-w-[65ch] mt-md lg:mt-0 ">
-      <h2 className="text-center mt-sm md:mt-0 font-bold leading-none ">
+    <section
+      aria-labelledby="tech-and-tools"
+      className="max-w-[65ch] mt-md lg:mt-0 "
+    >
+      <h2
+        id="tech-and-tools"
+        className="text-center mt-sm md:mt-0 font-bold leading-none "
+      >
         <span className="block text-medium text-darkBlue md:text-[3.5vw]">
           Tech & Tools
         </span>
@@ -13,7 +19,7 @@ const TechList = ({ tech }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 export default TechList;

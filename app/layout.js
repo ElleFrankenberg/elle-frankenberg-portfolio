@@ -1,5 +1,6 @@
 import Footer from "./components/global/footer/Footer";
 import Header from "./components/global/header/Header";
+import { NavProvider } from "./store/navContext";
 import "./globals.css";
 
 export const metadata = {
@@ -12,9 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="max-w-[1599px]">
-        <Header />
-        <>{children}</>
-        <Footer />
+        <NavProvider>
+          <Header />
+          {children}
+          <Footer />
+        </NavProvider>
       </body>
     </html>
   );

@@ -1,9 +1,13 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import { NavContext } from "@/app/store/navContext";
+import ScrollToTopBtn from "../../ui/ScrollToTopBtn";
+import { scrollToTopAndFocus } from "@/app/helpers/scrollToTopAndFocus";
 
 const Footer = () => {
   const footerRef = useRef();
+  const navRef = useContext(NavContext);
   const currentYear = new Date().getFullYear();
 
   useEffect(() => {
@@ -20,9 +24,16 @@ const Footer = () => {
     setFooterHeight(footerRef.current);
   }, [footerRef.current]);
 
+  const handleScrollToTop = () => {
+    scrollToTopAndFocus(window, navRef);
+  };
+
   return (
-    <footer ref={footerRef} className="p-sm">
-      <small>&copy; Copyright {currentYear}, Elle Frankenberg</small>
+    <footer ref={footerRef} className="flex p-sm items-center">
+      <ScrollToTopBtn
+        handleScrollToTop={handleScrollToTop}
+        showOnLargeScreen={false}
+      />
     </footer>
   );
 };

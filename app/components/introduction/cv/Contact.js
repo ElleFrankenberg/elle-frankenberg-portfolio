@@ -31,24 +31,23 @@ const Contact = ({ email, phone, address, country, links }) => {
           </li>
         </ul>
       </div>
-      <div className="md:justify-self-center">
-        <h3 className="text-reg font-bold text-darkBlue md:pt-sm ">Links</h3>
-        <ul>
-          {links.map((link) => (
-            <li key={link.linkUrl}>
-              <a
-                className="hover:text-darkBlue"
-                href={link.linkUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`Link to ${link.linkName}. This link opens in a new tab.`}
-              >
-                {link.linkName}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+
+      <h3 className="text-reg font-bold text-darkBlue mt-sm ">Links</h3>
+      <ul>
+        {links.map((link) => (
+          <li key={link.linkUrl}>
+            <a
+              className="hover:text-darkBlue"
+              href={link.linkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Link to ${link.linkName}. This link opens in a new tab.`}
+            >
+              {link.linkName}
+            </a>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

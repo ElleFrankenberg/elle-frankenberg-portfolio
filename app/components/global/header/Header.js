@@ -1,12 +1,14 @@
 "use client";
 import Link from "next/link";
 import { usePathname, useParams } from "next/navigation";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useContext } from "react";
+import { NavContext } from "@/app/store/navContext";
 
 const Header = () => {
   const pathname = usePathname();
   const params = useParams();
   const headerRef = useRef();
+  const navRef = useContext(NavContext);
 
   useEffect(() => {
     const setHeaderHeight = (header) => {
@@ -27,7 +29,7 @@ const Header = () => {
       ref={headerRef}
       className="pr-sm  p-sm border-b border-b-darkBlue sticky top-0 z-10 bg-white "
     >
-      <nav tabIndex="0" aria-label="Main navigation">
+      <nav ref={navRef} tabIndex="-1" aria-label="Main navigation">
         <ul className="flex gap-4 font-bold text-reg uppercase">
           <li
             className={`hover:text-darkBlue ${

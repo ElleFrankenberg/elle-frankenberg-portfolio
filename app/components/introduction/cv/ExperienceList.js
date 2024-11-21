@@ -9,20 +9,20 @@ const ExperienceList = ({ experiences }) => {
             <h3 className="text-reg font-bold text-darkBlue">
               <span>{experience.title}</span>
               {experience.degree && <span>, {experience.degree}</span>}
+              <span className="text-darkGray flex flex-wrap">
+                <span className="font-bold mr-[5px] after:content-[','] mr-xs">
+                  {experience.placeTitle}
+                </span>
+                <span>
+                  {experience.from} - {experience.to}
+                </span>
+              </span>
             </h3>
-            <h4 className="text-darkGray flex flex-wrap">
-              <span className="font-bold mr-[5px] after:content-[','] mr-xs">
-                {experience.placeTitle}
-              </span>
-              <span>
-                {experience.from} - {experience.to}
-              </span>
-            </h4>
             {experience.website && (
               <Link
                 className="hover:text-darkBlue"
                 href={experience.website[0]}
-                aria-label={`Link to ${experience.website[1]}`}
+                aria-label={`Link to ${experience.website[1]}. This link opens in a new tab.`}
               >
                 {experience.website[1]}
               </Link>
@@ -33,8 +33,11 @@ const ExperienceList = ({ experiences }) => {
               {experience.description}
             </p>
             {experience.selectedProjects && (
-              <>
-                <h4 className="text-darkBlue mt-1 font-bold">
+              <section aria-labelledby="selected-projects-section">
+                <h4
+                  id="selected-projects-section"
+                  className="text-darkBlue mt-1 font-bold"
+                >
                   {experience.selectedProjects.headline}
                 </h4>
                 <ul>
@@ -42,19 +45,19 @@ const ExperienceList = ({ experiences }) => {
                     (project, index) => (
                       <li key={index}>
                         <Link
-                          aria-label={`Link to ${project.title}`}
+                          aria-label={`Link to ${project.title}. This link opens in a new tab.`}
                           href={project.url}
                         >
-                          <h5 className="text-darkGray hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
+                          <span className="text-darkGray hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
                             {project.title}
-                          </h5>
+                          </span>
                         </Link>
                         <p className="ml-4"> {project.description}</p>
                       </li>
                     )
                   )}
                 </ul>
-              </>
+              </section>
             )}
           </div>
         </li>

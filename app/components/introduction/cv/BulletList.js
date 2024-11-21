@@ -3,7 +3,7 @@ const BulletList = ({ skills }) => {
     <ul className="skill-list flex flex-wrap">
       {skills.map((skill, i) => (
         <li key={i}>
-          <span className="">{skill}</span>
+          <span>{skill}</span>
         </li>
       ))}
     </ul>
