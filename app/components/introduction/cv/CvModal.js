@@ -53,7 +53,10 @@ const CvModal = ({ cv }) => {
               }}
               onClick={closeModal}
             >
-              <IoCloseCircle className="w-[32px] h-[32px] text-darkGray hover:text-darkBlue transition-colors " />
+              <IoCloseCircle
+                className="w-[32px] h-[32px] text-darkGray hover:text-darkBlue transition-colors "
+                aria-hidden="true"
+              />
             </button>
             <ul className="flex flex-col gap-sm order-2 md:flex-row">
               <li>
@@ -63,7 +66,10 @@ const CvModal = ({ cv }) => {
                   className="flex items-center text-darkGray hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
                 >
-                  <FaFileDownload className="w-[30px] h-[30px]  mr-1" />
+                  <FaFileDownload
+                    className="w-[30px] h-[30px]  mr-1"
+                    aria-hidden="true"
+                  />
                   <span>Download CV in English</span>
                 </a>
               </li>
@@ -74,7 +80,10 @@ const CvModal = ({ cv }) => {
                   className="flex items-center text-darkGray hover:text-darkBlue transition-colors"
                   aria-label="Download CV in Swedish"
                 >
-                  <FaFileDownload className="w-[30px] h-[30px] mr-1" />
+                  <FaFileDownload
+                    className="w-[30px] h-[30px] mr-1"
+                    aria-hidden="true"
+                  />
                   <span>Download CV in Swedish</span>
                 </a>
               </li>
@@ -201,7 +210,7 @@ const CvModal = ({ cv }) => {
             </h2>
             <ExperienceList experiences={cv.otherMerits} />
           </section>
-          <footer className="flex">
+          <footer className="flex justify-end">
             <ScrollToTopBtn
               handleScrollToTop={handleScrollToTop}
               showOnLargeScreen={true}

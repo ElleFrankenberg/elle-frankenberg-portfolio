@@ -1,3 +1,7 @@
+import { FaGithub } from "react-icons/fa";
+import { BsGlobe } from "react-icons/bs";
+import Button from "@/app/components/ui/Button";
+
 const InformationList = ({ projectInfo }) => {
   return (
     <dl className="grid grid-cols-1  md:grid-cols-[auto,1fr] ml-sm mr-sm">
@@ -12,37 +16,27 @@ const InformationList = ({ projectInfo }) => {
         {projectInfo.urls.length > 1 ? "Links:" : "Link:"}
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <ul className="flex ">
+        <ul className="flex flex-wrap gap-4">
           {projectInfo.urls[0] && (
-            <li className="mr-sm" key={projectInfo.urls[0]}>
-              <a
-                target="_blank"
-                className="inline-block p-1 hover:text-darkBlue "
-                href={projectInfo.urls[0]}
-              >
-                View it live
-              </a>
+            <li>
+              <Button href={projectInfo.urls[0]} label="View the project live.">
+                <BsGlobe className="w-[37px] h-[37px] " aria-hidden="true" />
+                <span className="ml-2">View it live</span>
+              </Button>
             </li>
           )}
           {projectInfo.urls[1] && (
-            <li key={projectInfo.urls[1]}>
-              <a
-                target="_blank"
-                className="inline-block p-1 hover:text-darkBlue"
+            <li>
+              <Button
                 href={projectInfo.urls[1]}
+                label="View the project code on Github."
               >
-                View the code
-              </a>
+                <FaGithub className="w-[37px] h-[37px] " aria-hidden="true" />
+                <span>View the code</span>
+              </Button>
             </li>
           )}
         </ul>
-      </dd>
-
-      <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
-        Year:
-      </dt>
-      <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <p>{projectInfo.year}</p>
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
@@ -56,13 +50,20 @@ const InformationList = ({ projectInfo }) => {
         Technologies:
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <ul className="flex flex-wrap">
+        <ul className="flex flex-wrap gap-4">
           {projectInfo.technologies.map((technologie) => (
-            <li key={technologie} className="mr-sm">
+            <li key={technologie} className=" text-white bg-black pl-1 pr-1">
               {technologie}
             </li>
           ))}
         </ul>
+      </dd>
+
+      <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
+        Year:
+      </dt>
+      <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
+        <p>{projectInfo.year}</p>
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
