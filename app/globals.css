@@ -247,23 +247,23 @@ a {
 }
 
 .tech-list li:nth-child(3) {
-  background-color: var(--darkPink);
+  background-color: var(--darkBlue);
 }
 .tech-list li:nth-child(5) {
   background-color: var(--darkBlue);
 }
 .tech-list li:nth-child(10) {
-  background-color: var(--darkYellow);
+  background-color: var(--darkBlue);
 }
 
 .skill-list-colored li:nth-child(1) {
-  background-color: var(--darkPink);
+  background-color: var(--darkBlue);
 }
 .skill-list-colored li:nth-child(3) {
   background-color: var(--darkBlue);
 }
 .skill-list-colored li:nth-child(10) {
-  background-color: var(--darkYellow);
+  background-color: var(--darkBlue);
 }
 
 /* target :last-child */

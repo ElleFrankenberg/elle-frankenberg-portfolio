@@ -9,6 +9,36 @@ const InformationList = ({ projectInfo }) => {
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
+        {projectInfo.urls.length > 1 ? "Links:" : "Link:"}
+      </dt>
+      <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
+        <ul className="flex ">
+          {projectInfo.urls[0] && (
+            <li className="mr-sm" key={projectInfo.urls[0]}>
+              <a
+                target="_blank"
+                className="inline-block p-1 hover:text-darkBlue "
+                href={projectInfo.urls[0]}
+              >
+                View it live
+              </a>
+            </li>
+          )}
+          {projectInfo.urls[1] && (
+            <li key={projectInfo.urls[1]}>
+              <a
+                target="_blank"
+                className="inline-block p-1 hover:text-darkBlue"
+                href={projectInfo.urls[1]}
+              >
+                View the code
+              </a>
+            </li>
+          )}
+        </ul>
+      </dd>
+
+      <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
         Year:
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
@@ -42,36 +72,6 @@ const InformationList = ({ projectInfo }) => {
         <a className="hover:text-darkBlue" href={projectInfo.designBy[1]}>
           {projectInfo.designBy[0]}
         </a>
-      </dd>
-
-      <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
-        {projectInfo.urls.length > 1 ? "Links:" : "Link:"}
-      </dt>
-      <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <ul className="flex ">
-          {projectInfo.urls[0] && (
-            <li className="mr-sm" key={projectInfo.urls[0]}>
-              <a
-                target="_blank"
-                className="inline-block p-1 bg-darkBlue text-white "
-                href={projectInfo.urls[0]}
-              >
-                Live Demo
-              </a>
-            </li>
-          )}
-          {projectInfo.urls[1] && (
-            <li key={projectInfo.urls[1]}>
-              <a
-                target="_blank"
-                className="inline-block p-1 bg-darkPink text-white "
-                href={projectInfo.urls[1]}
-              >
-                View the code
-              </a>
-            </li>
-          )}
-        </ul>
       </dd>
     </dl>
   );

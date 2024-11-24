@@ -17,6 +17,7 @@ export default async function ProjectsPage() {
 
     return (
       <main>
+        <h1 className="sr-only">Projects</h1>
         <ProjectsList projects={projects} />
       </main>
     );

@@ -1,13 +1,12 @@
 import ProjectCard from "./ProjectCard";
 
 const ProjectsList = ({ projects }) => {
-  // projects.map((project) => console.log(project._id.toString()));
-
   return (
     <>
       <ul className="grid-projects">
         {projects.map((project) => (
           <ProjectCard
+            key={project._id.toString()}
             id={project._id.toString()}
             cover={project.cover}
             title={project.title}

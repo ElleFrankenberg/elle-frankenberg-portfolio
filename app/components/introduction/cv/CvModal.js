@@ -30,7 +30,7 @@ const CvModal = ({ cv }) => {
         aria-expanded={modalIsOpen ? "true" : "false"}
         tabIndex="0"
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
-        className="bg-darkGray hover:bg-darkBlue transition-colors w-[33px] h-[32px] rounded-full text-white uppercase font-bold "
+        className="bg-darkGray hover:bg-darkBlue transition-colors w-[47px] h-[47px] rounded-full text-white uppercase font-bold "
       >
         CV
       </button>
@@ -53,17 +53,17 @@ const CvModal = ({ cv }) => {
               }}
               onClick={closeModal}
             >
-              <IoCloseCircle className="w-[32px] h-[32px] text-darkBlue " />
+              <IoCloseCircle className="w-[32px] h-[32px] text-darkGray hover:text-darkBlue transition-colors " />
             </button>
             <ul className="flex flex-col gap-sm order-2 md:flex-row">
               <li>
                 <a
                   href="/Elle_Frankenberg_CV_eng.pdf"
                   download="Elle_Frankenberg_CV_eng.pdf"
-                  className="flex items-center hover:text-darkBlue"
+                  className="flex items-center text-darkGray hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
                 >
-                  <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
+                  <FaFileDownload className="w-[30px] h-[30px]  mr-1" />
                   <span>Download CV in English</span>
                 </a>
               </li>
@@ -71,10 +71,10 @@ const CvModal = ({ cv }) => {
                 <a
                   href="/Elle_Frankenberg_CV_sve.pdf"
                   download="Elle_Frankenberg_CV_sve.pdf"
-                  className="flex items-center hover:text-darkBlue"
+                  className="flex items-center text-darkGray hover:text-darkBlue transition-colors"
                   aria-label="Download CV in Swedish"
                 >
-                  <FaFileDownload className="w-[30px] h-[30px] text-darkBlue mr-1" />
+                  <FaFileDownload className="w-[30px] h-[30px] mr-1" />
                   <span>Download CV in Swedish</span>
                 </a>
               </li>
