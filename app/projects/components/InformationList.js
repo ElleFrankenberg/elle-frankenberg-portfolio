@@ -19,7 +19,11 @@ const InformationList = ({ projectInfo }) => {
         <ul className="flex flex-wrap gap-4">
           {projectInfo.urls[0] && (
             <li>
-              <Button href={projectInfo.urls[0]} label="View the project live.">
+              <Button
+                isLink={true}
+                href={projectInfo.urls[0]}
+                label="View the project live."
+              >
                 <BsGlobe className="w-[37px] h-[37px] " aria-hidden="true" />
                 <span className="ml-2">View it live</span>
               </Button>
@@ -28,6 +32,7 @@ const InformationList = ({ projectInfo }) => {
           {projectInfo.urls[1] && (
             <li>
               <Button
+                isLink={true}
                 href={projectInfo.urls[1]}
                 label="View the project code on Github."
               >
