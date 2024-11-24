@@ -96,6 +96,7 @@ const ProjectVideo = ({ video }) => {
             width="90%"
             height="auto"
             muted={true}
+            playsinline={true}
             playing={isPlaying}
             loop={true}
             url={video}
