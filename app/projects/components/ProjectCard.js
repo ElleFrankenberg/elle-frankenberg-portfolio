@@ -9,7 +9,7 @@ const ProjectCard = ({ id, cover, title, slug, year }) => {
         href={`/projects/${slug}`}
         aria-labelledby={`project-title-${id}`}
       >
-        <p className="pb-sm font-bold text-xsm md:text-reg uppercase text-darkGray group-hover:text-darkBlue transition-colors">
+        <p className="pb-sm font-bold text-xsm md:text-reg uppercase text-darkGray lg:group-hover:text-darkBlue transition-colors">
           {year}
         </p>
 
@@ -25,7 +25,7 @@ const ProjectCard = ({ id, cover, title, slug, year }) => {
         <div className="pt-sm grow flex flex-col justify-end">
           <h2
             id={`project-title-${id}`}
-            className="font-bold text-xsm md:text-reg uppercase text-darkGray group-hover:text-darkBlue transition-colors"
+            className="font-bold text-xsm md:text-reg uppercase text-darkGray lg:group-hover:text-darkBlue transition-colors"
           >
             {title}
           </h2>

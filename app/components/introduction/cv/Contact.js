@@ -37,7 +37,7 @@ const Contact = ({ email, phone, address, country, links }) => {
         {links.map((link) => (
           <li key={link.linkUrl}>
             <a
-              className="hover:text-darkBlue"
+              className="lg:hover:text-darkBlue"
               href={link.linkUrl}
               target="_blank"
               rel="noopener noreferrer"

@@ -47,9 +47,9 @@ const FeaturedProjectCard = ({
             <Link
               target="_blank"
               href={urls[0]}
-              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray hover:bg-darkBlue hover:text-white transition-colors"
+              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray lg:hover:bg-darkBlue lg:hover:text-white transition-colors"
             >
-              <FaGithub className="w-[32px] h-[32px] text-lightGray group-hover:text-white mr-xs" />
+              <FaGithub className="w-[32px] h-[32px] text-lightGray lg:group-hover:text-white mr-xs" />
               View the code
             </Link>
           </li>
@@ -57,9 +57,9 @@ const FeaturedProjectCard = ({
             <Link
               target="_blank"
               href={urls[0]}
-              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray hover:bg-darkPink hover:text-white transition-colors"
+              className="group flex pl-2 pr-3 py-2 rounded-full items-center bg-darkGray  text-lightGray lg:hover:bg-darkPink lg:hover:text-white transition-colors"
             >
-              <FaArrowAltCircleRight className=" -rotate-45 w-[32px] h-[32px] text-lightGray group-hover:text-white mr-xs" />
+              <FaArrowAltCircleRight className=" -rotate-45 w-[32px] h-[32px] text-lightGray lg:group-hover:text-white mr-xs" />
               Live demo
             </Link>
           </li>

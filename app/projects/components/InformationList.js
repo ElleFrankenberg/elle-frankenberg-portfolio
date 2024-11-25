@@ -75,7 +75,7 @@ const InformationList = ({ projectInfo }) => {
         Design by:
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <a className="hover:text-darkBlue" href={projectInfo.designBy[1]}>
+        <a className="lg:hover:text-darkBlue" href={projectInfo.designBy[1]}>
           {projectInfo.designBy[0]}
         </a>
       </dd>

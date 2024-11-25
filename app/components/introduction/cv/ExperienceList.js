@@ -20,7 +20,7 @@ const ExperienceList = ({ experiences }) => {
             </h3>
             {experience.website && (
               <Link
-                className="hover:text-darkBlue"
+                className="lg:hover:text-darkBlue"
                 href={experience.website[0]}
                 aria-label={`Link to ${experience.website[1]}. This link opens in a new tab.`}
               >
@@ -48,7 +48,7 @@ const ExperienceList = ({ experiences }) => {
                           aria-label={`Link to ${project.title}. This link opens in a new tab.`}
                           href={project.url}
                         >
-                          <span className="text-darkGray hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
+                          <span className="text-darkGray lg:hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
                             {project.title}
                           </span>
                         </Link>
