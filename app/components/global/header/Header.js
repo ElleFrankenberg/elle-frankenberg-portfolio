@@ -32,7 +32,7 @@ const Header = () => {
       <nav ref={navRef} tabIndex="-1" aria-label="Main navigation">
         <ul className="flex gap-4 font-bold text-reg uppercase">
           <li
-            className={`hover:text-darkBlue ${
+            className={`lg:hover:text-darkBlue ${
               pathname === "/" ? "text-darkBlue" : "text-darkGray"
             }`}
           >
@@ -41,7 +41,7 @@ const Header = () => {
             </Link>
           </li>
           <li
-            className={`hover:text-darkBlue ${
+            className={`lg:hover:text-darkBlue ${
               pathname === "/projects" ||
               pathname === `/projects/${params.slug}`
                 ? "text-darkBlue"
