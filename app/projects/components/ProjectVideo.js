@@ -107,6 +107,7 @@ const ProjectVideo = ({ video }) => {
               isLink={false}
               onClick={togglePlayPause}
               aria-label={isPlaying ? "Pause video" : "Play video"}
+              isActive={isPlaying ? true : false}
             >
               {isPlaying ? (
                 <FaRegPauseCircle
