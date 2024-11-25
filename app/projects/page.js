@@ -15,10 +15,14 @@ export default async function ProjectsPage() {
       throw new Error(`Not found`);
     }
 
+    const sortedProjects = projects.sort((a, b) => {
+      return parseInt(b.year) - parseInt(a.year);
+    });
+
     return (
       <main>
         <h1 className="sr-only">Projects</h1>
-        <ProjectsList projects={projects} />
+        <ProjectsList projects={sortedProjects} />
       </main>
     );
   } catch (error) {

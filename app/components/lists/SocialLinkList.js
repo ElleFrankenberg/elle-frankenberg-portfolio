@@ -12,7 +12,7 @@ const SocialLinkList = ({ socialLinks }) => {
           aria-label="Link to Github. This link opens in a new tab."
         >
           <FaGithub
-            className="w-[47px] h-[47px] text-darkGray lg:hover:text-darkBlue transition-colors"
+            className="w-[37px] h-[37px] text-darkGray lg:hover:text-darkBlue transition-colors"
             aria-hidden="true"
           />
         </a>
@@ -25,7 +25,7 @@ const SocialLinkList = ({ socialLinks }) => {
           aria-label="Link to Linkedin. This link opens in a new tab."
         >
           <FaLinkedin
-            className="w-[47px] h-[47px] text-darkGray lg:hover:text-darkBlue transition-colors"
+            className="w-[37px] h-[37px] text-darkGray lg:hover:text-darkBlue transition-colors"
             aria-hidden="true"
           />
         </a>

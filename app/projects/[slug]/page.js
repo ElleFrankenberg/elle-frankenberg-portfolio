@@ -3,6 +3,7 @@ import ProjectVideo from "../components/ProjectVideo";
 import ProjectSwiper from "../components/ProjectSwiper";
 import { fetchProject } from "../../../lib/fetchProject";
 import ProjectCoverImage from "../components/ProjectCoverImage";
+import Link from "next/link";
 
 export async function generateMetadata({ params: { slug } }) {
   const project = await fetchProject("projects", slug);

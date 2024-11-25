@@ -29,8 +29,13 @@ const Header = () => {
       ref={headerRef}
       className="pr-sm  p-sm border-b border-b-darkBlue sticky top-0 z-10 bg-white "
     >
-      <nav ref={navRef} tabIndex="-1" aria-label="Main navigation">
-        <ul className="flex gap-4 font-bold text-reg uppercase">
+      <nav
+        ref={navRef}
+        tabIndex="-1"
+        aria-label="Main navigation"
+        className="flex items-center justify-between flex-wrap gap-4"
+      >
+        <ul className="flex gap-4 font-bold text-reg uppercase ">
           <li
             className={`lg:hover:text-darkBlue ${
               pathname === "/" ? "text-darkBlue" : "text-darkGray"

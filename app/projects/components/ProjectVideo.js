@@ -102,31 +102,28 @@ const ProjectVideo = ({ video }) => {
             url={video}
             onReady={handleReady}
           />
-          <div className="mt-4 lg:mt-0 lg:absolute lg:bottom-[-5px] lg:right-[-3rem] lg:z-10">
-            <Button
-              isLink={false}
-              onClick={togglePlayPause}
-              aria-label={isPlaying ? "Pause video" : "Play video"}
-              isActive={isPlaying ? true : false}
-            >
-              {isPlaying ? (
-                <FaRegPauseCircle
-                  className="w-[37px] h-[37px] "
-                  aria-hidden="true"
-                />
-              ) : (
-                <FaPlayCircle
-                  className="w-[37px] h-[37px] "
-                  aria-hidden="true"
-                />
-              )}
-
-              <span className="ml-2">
-                {isPlaying ? "Pause video" : "Play video"}
-              </span>
-            </Button>
-          </div>
         </figure>
+        <div className="my-4">
+          <Button
+            isLink={false}
+            onClick={togglePlayPause}
+            aria-label={isPlaying ? "Pause video" : "Play video"}
+            isActive={isPlaying ? true : false}
+          >
+            {isPlaying ? (
+              <FaRegPauseCircle
+                className="w-[30px] h-[30px] "
+                aria-hidden="true"
+              />
+            ) : (
+              <FaPlayCircle className="w-[30px] h-[30px] " aria-hidden="true" />
+            )}
+
+            <span className="ml-2">
+              {isPlaying ? "Pause video" : "Play video"}
+            </span>
+          </Button>
+        </div>
       </section>
     </>
   );

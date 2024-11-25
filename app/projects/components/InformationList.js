@@ -24,7 +24,7 @@ const InformationList = ({ projectInfo }) => {
                 href={projectInfo.urls[0]}
                 label="View the project live."
               >
-                <BsGlobe className="w-[37px] h-[37px] " aria-hidden="true" />
+                <BsGlobe className="w-[30px] h-[30px] " aria-hidden="true" />
                 <span className="ml-2">View it live</span>
               </Button>
             </li>
@@ -36,7 +36,7 @@ const InformationList = ({ projectInfo }) => {
                 href={projectInfo.urls[1]}
                 label="View the project code on Github."
               >
-                <FaGithub className="w-[37px] h-[37px] " aria-hidden="true" />
+                <FaGithub className="w-[30px] h-[30px] " aria-hidden="true" />
                 <span>View the code</span>
               </Button>
             </li>
@@ -57,7 +57,7 @@ const InformationList = ({ projectInfo }) => {
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
         <ul className="flex flex-wrap gap-4">
           {projectInfo.technologies.map((technologie) => (
-            <li key={technologie} className=" text-white bg-black pl-1 pr-1">
+            <li key={technologie} className="">
               {technologie}
             </li>
           ))}

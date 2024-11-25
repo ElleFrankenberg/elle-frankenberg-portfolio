@@ -18,7 +18,7 @@ const Button = ({ isLink, children, href, label, isActive, ...props }) => {
       aria-label={label}
       className={`group ${
         isActive ? "bg-darkBlue" : "bg-darkGray"
-      } text-white py-[0.3rem] pr-4 pl-2 rounded-full flex items-center gap-1 transition-colors lg:hover:bg-darkBlue w-full h-full`}
+      } text-white py-[0.3rem] pr-4 pl-2 rounded-full flex items-center  gap-1 transition-colors lg:hover:bg-darkBlue w-full h-full`}
       {...props}
     >
       {children}

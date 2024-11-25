@@ -30,7 +30,7 @@ const CvModal = ({ cv }) => {
         aria-expanded={modalIsOpen ? "true" : "false"}
         tabIndex="0"
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
-        className="bg-darkGray lg:hover:bg-darkBlue transition-colors w-[47px] h-[47px] rounded-full text-white uppercase font-bold "
+        className="bg-darkGray lg:hover:bg-darkBlue transition-colors w-[37px] h-[37px] rounded-full text-white uppercase font-bold "
       >
         CV
       </button>
@@ -44,7 +44,7 @@ const CvModal = ({ cv }) => {
           <header className="border-b border-b-darkBlue pb-sm flex gap-4 flex-col md:flex-row md:items-center">
             <button
               ref={closeButtonRef}
-              className="mr-auto cursor-pointer order-1 md:order-2"
+              className="ml-auto md:ml-0 md:mr-auto cursor-pointer order-1 md:order-2"
               aria-label="close modal"
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
