@@ -89,11 +89,11 @@ const ProjectVideo = ({ video }) => {
 
       <section
         className="flex flex-col items-center justify-center mr-[15px] ml-[16px] "
-        style={{ display: loading ? "none" : "block" }}
+        style={{ display: loading ? "none" : "flex" }}
       >
-        <figure className="lg:relative w-full p-sm aspect-video flex flex-col items-center justify-center">
+        <figure className="lg:relative w-full py-sm lg:p-sm aspect-video flex flex-col items-center justify-center lg:w-[90%]">
           <ReactPlayer
-            width="90%"
+            width="100%"
             height="auto"
             muted={true}
             playsinline={true}
@@ -102,7 +102,7 @@ const ProjectVideo = ({ video }) => {
             url={video}
             onReady={handleReady}
           />
-          <div className="mt-4 lg:mt-0 lg:absolute bottom-0 right-4 lg:transform lg:translate-y-[-50%] lg:z-10">
+          <div className="mt-4 lg:mt-0 lg:absolute lg:bottom-[-5px] lg:right-[-3rem] lg:z-10">
             <Button
               isLink={false}
               onClick={togglePlayPause}
@@ -122,7 +122,7 @@ const ProjectVideo = ({ video }) => {
               )}
 
               <span className="ml-2">
-                {isPlaying ? "Pause Video" : "Play Video"}
+                {isPlaying ? "Pause video" : "Play video"}
               </span>
             </Button>
           </div>
