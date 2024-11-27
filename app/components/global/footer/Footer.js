@@ -10,7 +10,6 @@ import { FaGithub } from "react-icons/fa";
 const Footer = () => {
   const footerRef = useRef();
   const navRef = useContext(NavContext);
-  // const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const setFooterHeight = (footer) => {

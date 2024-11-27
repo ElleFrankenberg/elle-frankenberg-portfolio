@@ -91,7 +91,8 @@ a:focus:not(:focus-visible) {
 
 .grid-projects,
 .grid-intro,
-.project {
+.project,
+.error {
   min-height: calc(100vh - var(--footer-height) - var(--header-height));
 }
 

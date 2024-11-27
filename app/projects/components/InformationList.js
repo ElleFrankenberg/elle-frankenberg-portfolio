@@ -9,7 +9,7 @@ const InformationList = ({ projectInfo }) => {
         Project:
       </dt>
       <dd className="font-bold text-reg uppercase text-darkBlue pb-sm md:p-sm border-b border-b-darkBlue">
-        <h1 className="mt-1 ">{projectInfo.title}</h1>
+        <h1 className="md:mt-1 ">{projectInfo.title}</h1>
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">

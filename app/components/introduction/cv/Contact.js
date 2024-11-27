@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Contact = ({ email, phone, address, country, links }) => {
   return (
     <section aria-labelledby="contact-section">

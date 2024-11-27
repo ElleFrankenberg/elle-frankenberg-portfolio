@@ -63,11 +63,11 @@ const CvModal = ({ cv }) => {
                 <a
                   href="/Elle_Frankenberg_CV_eng.pdf"
                   download="Elle_Frankenberg_CV_eng.pdf"
-                  className="flex items-center text-mediumGray lg:hover:text-darkBlue transition-colors"
+                  className="group flex items-center lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
                 >
                   <FaFileDownload
-                    className="w-[30px] h-[30px]  mr-1"
+                    className="w-[30px] h-[30px] text-mediumGray mr-1 transition-colors lg:group-hover:text-darkBlue "
                     aria-hidden="true"
                   />
                   <span>Download CV in English</span>
@@ -77,11 +77,11 @@ const CvModal = ({ cv }) => {
                 <a
                   href="/Elle_Frankenberg_CV_sve.pdf"
                   download="Elle_Frankenberg_CV_sve.pdf"
-                  className="flex items-center text-mediumGray lg:hover:text-darkBlue transition-colors"
+                  className="group flex items-center lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in Swedish"
                 >
                   <FaFileDownload
-                    className="w-[30px] h-[30px] mr-1"
+                    className="w-[30px] h-[30px] text-mediumGray mr-1 transition-colors lg:group-hover:text-darkBlue "
                     aria-hidden="true"
                   />
                   <span>Download CV in Swedish</span>

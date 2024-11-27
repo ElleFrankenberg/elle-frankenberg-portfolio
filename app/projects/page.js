@@ -1,4 +1,5 @@
 import ProjectsList from "./components/ProjectsList";
+import ErrorInformation from "../components/global/ErrorInformation";
 import { fetchData } from "../../lib/fetchData";
 
 export const metadata = {
@@ -27,8 +28,8 @@ export default async function ProjectsPage() {
     );
   } catch (error) {
     return (
-      <main>
-        <p>Error loading projects.</p>
+      <main className="error flex justify-center items-center text-darkBlue ">
+        <ErrorInformation errorText="Error loading projects." />
       </main>
     );
   }

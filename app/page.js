@@ -1,4 +1,5 @@
 import Introduction from "./components/introduction/Introduction";
+import ErrorInformation from "./components/global/ErrorInformation";
 import { fetchData } from "../lib/fetchData";
 
 export default async function Home() {
@@ -26,8 +27,8 @@ export default async function Home() {
     );
   } catch (error) {
     return (
-      <main>
-        <p>Error loading data.</p>
+      <main className="error flex justify-center items-center text-darkBlue ">
+        <ErrorInformation errorText="Error loading data." />
       </main>
     );
   }

@@ -1,14 +1,13 @@
 import Image from "next/image";
 import SocialLinkList from "../lists/SocialLinkList";
-import TechList from "../lists/TechList";
+
 import CvModal from "./cv/CvModal";
-import SkillList from "../lists/SkillList";
+import HighlightsList from "../lists/HighlightsList";
 
 const Introduction = ({
   name,
   occupationTitle,
   extraWorkTitle,
-  description,
   cv,
   tech,
   skills,
@@ -71,8 +70,18 @@ const Introduction = ({
         </div>
         <div className="grid-intro-card p-sm">
           <section className="min-h-[50dvh] h-full flex flex-col items-center justify-around xxl:flex-row xxl:min-h-[unset] xxl:pt-lg xxl:pb-lg">
-            <TechList tech={tech} />
-            <SkillList skills={skills} />
+            <HighlightsList
+              title="Tech & Tools"
+              items={tech}
+              sectionId="tech-and-tools"
+              listClassName="tech-list"
+            />
+            <HighlightsList
+              title="Skills"
+              items={skills}
+              sectionId="skills"
+              listClassName="skill-list-colored"
+            />
           </section>
         </div>
       </section>

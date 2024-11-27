@@ -3,7 +3,7 @@ import ProjectVideo from "../components/ProjectVideo";
 import ProjectSwiper from "../components/ProjectSwiper";
 import { fetchProject } from "../../../lib/fetchProject";
 import ProjectCoverImage from "../components/ProjectCoverImage";
-import Link from "next/link";
+import ErrorInformation from "@/app/components/global/ErrorInformation";
 
 export async function generateMetadata({ params: { slug } }) {
   const project = await fetchProject("projects", slug);
@@ -36,8 +36,8 @@ export default async function ProjectPage({ params: { slug } }) {
     );
   } catch (error) {
     return (
-      <main>
-        <p>Error loading project.</p>
+      <main className="error flex justify-center items-center text-darkBlue ">
+        <ErrorInformation errorText="Error loading project." />
       </main>
     );
   }

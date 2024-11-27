@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 const ExperienceList = ({ experiences }) => {
   return (
-    <ul className="">
+    <ul>
       {experiences.map((experience, i) => (
         <li key={i} className="pb-md grid grid-col-1 md:grid-cols-2">
           <div>
@@ -19,13 +17,13 @@ const ExperienceList = ({ experiences }) => {
               </span>
             </h3>
             {experience.website && (
-              <Link
+              <a
                 className="lg:hover:text-darkBlue"
                 href={experience.website[0]}
                 aria-label={`Link to ${experience.website[1]}. This link opens in a new tab.`}
               >
                 {experience.website[1]}
-              </Link>
+              </a>
             )}
           </div>
           <div>
@@ -42,14 +40,14 @@ const ExperienceList = ({ experiences }) => {
                   {experience.selectedProjects.projects.map(
                     (project, index) => (
                       <li key={index}>
-                        <Link
+                        <a
                           aria-label={`Link to ${project.title}. This link opens in a new tab.`}
                           href={project.url}
                         >
                           <span className="text-darkGray lg:hover:text-darkBlue mt-1 font-bold before:content-['•'] before:text-darkBlue before:mr-2">
                             {project.title}
                           </span>
-                        </Link>
+                        </a>
                         <p className="ml-4"> {project.description}</p>
                       </li>
                     )
