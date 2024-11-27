@@ -30,7 +30,7 @@ const CvModal = ({ cv }) => {
         aria-expanded={modalIsOpen ? "true" : "false"}
         tabIndex="0"
         onClick={() => setModalIsOpen((modalIsOpen) => !modalIsOpen)}
-        className="bg-darkGray lg:hover:bg-darkBlue transition-colors w-[37px] h-[37px] rounded-full text-white uppercase font-bold "
+        className="bg-mediumGray lg:hover:bg-darkBlue w-[37px] h-[37px] transition-colors rounded-full text-white uppercase font-bold "
       >
         CV
       </button>
@@ -54,7 +54,7 @@ const CvModal = ({ cv }) => {
               onClick={closeModal}
             >
               <IoCloseCircle
-                className="w-[32px] h-[32px] text-darkGray lg:hover:text-darkBlue transition-colors "
+                className="w-[32px] h-[32px] text-mediumGray lg:hover:text-darkBlue transition-colors "
                 aria-hidden="true"
               />
             </button>
@@ -63,7 +63,7 @@ const CvModal = ({ cv }) => {
                 <a
                   href="/Elle_Frankenberg_CV_eng.pdf"
                   download="Elle_Frankenberg_CV_eng.pdf"
-                  className="flex items-center text-darkGray lg:hover:text-darkBlue transition-colors"
+                  className="flex items-center text-mediumGray lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
                 >
                   <FaFileDownload
@@ -77,7 +77,7 @@ const CvModal = ({ cv }) => {
                 <a
                   href="/Elle_Frankenberg_CV_sve.pdf"
                   download="Elle_Frankenberg_CV_sve.pdf"
-                  className="flex items-center text-darkGray lg:hover:text-darkBlue transition-colors"
+                  className="flex items-center text-mediumGray lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in Swedish"
                 >
                   <FaFileDownload

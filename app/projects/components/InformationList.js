@@ -9,7 +9,7 @@ const InformationList = ({ projectInfo }) => {
         Project:
       </dt>
       <dd className="font-bold text-reg uppercase text-darkBlue pb-sm md:p-sm border-b border-b-darkBlue">
-        <h1>{projectInfo.title}</h1>
+        <h1 className="mt-1 ">{projectInfo.title}</h1>
       </dd>
 
       <dt className="pt-sm pb-xs md:pb-sm md:border-b md:border-b-darkBlue">
@@ -75,7 +75,11 @@ const InformationList = ({ projectInfo }) => {
         Design by:
       </dt>
       <dd className="pb-sm md:p-sm border-b border-b-darkBlue">
-        <a className="lg:hover:text-darkBlue" href={projectInfo.designBy[1]}>
+        <a
+          className="lg:hover:text-darkBlue"
+          aria-label={` Link to ${projectInfo.designBy[0]}. The link opens in a new tab`}
+          href={projectInfo.designBy[1]}
+        >
           {projectInfo.designBy[0]}
         </a>
       </dd>

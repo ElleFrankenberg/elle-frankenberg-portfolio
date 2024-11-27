@@ -29,9 +29,7 @@ const ExperienceList = ({ experiences }) => {
             )}
           </div>
           <div>
-            <p className=" mt-[--gap-small] md:mt-0">
-              {experience.description}
-            </p>
+            <p className=" mt-4 md:mt-0">{experience.description}</p>
             {experience.selectedProjects && (
               <section aria-labelledby="selected-projects-section">
                 <h4

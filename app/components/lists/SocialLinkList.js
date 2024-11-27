@@ -10,9 +10,10 @@ const SocialLinkList = ({ socialLinks }) => {
           rel="noopener noreferrer"
           href={socialLinks[0]}
           aria-label="Link to Github. This link opens in a new tab."
+          className="inline-flex items-center justify-center"
         >
           <FaGithub
-            className="w-[37px] h-[37px] text-darkGray lg:hover:text-darkBlue transition-colors"
+            className="w-[37px] h-[37px] text-mediumGray lg:hover:text-darkBlue transition-colors"
             aria-hidden="true"
           />
         </a>
@@ -23,9 +24,10 @@ const SocialLinkList = ({ socialLinks }) => {
           rel="noopener noreferrer"
           href={socialLinks[1]}
           aria-label="Link to Linkedin. This link opens in a new tab."
+          className="inline-flex items-center justify-center "
         >
           <FaLinkedin
-            className="w-[37px] h-[37px] text-darkGray lg:hover:text-darkBlue transition-colors"
+            className="w-[37px] h-[37px] text-mediumGray lg:hover:text-darkBlue transition-colors"
             aria-hidden="true"
           />
         </a>

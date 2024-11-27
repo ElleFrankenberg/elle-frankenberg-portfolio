@@ -35,31 +35,52 @@ const Header = () => {
         aria-label="Main navigation"
         className="flex items-center justify-between flex-wrap gap-4"
       >
-        <ul className="flex gap-4 font-bold text-reg uppercase ">
+        <ul className="flex flex-wrap gap-4 font-bold text-reg uppercase ">
           <li
             className={`lg:hover:text-darkBlue ${
               pathname === "/" ? "text-darkBlue" : "text-darkGray"
             }`}
           >
-            <Link href="/" aria-label="Go to Elle Frankenberg's homepage">
+            <Link
+              href="/"
+              aria-label="homepage"
+              aria-current={pathname === "/" ? "page" : undefined}
+            >
               Elle Frankenberg
             </Link>
           </li>
           <li
             className={`lg:hover:text-darkBlue ${
-              pathname === "/projects" ||
-              pathname === `/projects/${params.slug}`
-                ? "text-darkBlue"
-                : "text-darkGray"
+              pathname === "/projects" ? "text-darkBlue" : "text-darkGray"
             }`}
           >
             <Link
               href="/projects"
-              aria-label="Go to Elle Frankenberg's projects"
+              aria-label="projects"
+              aria-current={pathname === "/projects" ? "page" : undefined}
             >
               Projects
             </Link>
           </li>
+          {pathname === `/projects/${params.slug}` && (
+            <li
+              className={`lg:hover:text-darkBlue ${
+                pathname === `/projects/${params.slug}`
+                  ? "text-darkBlue"
+                  : "text-darkGray"
+              }`}
+            >
+              <Link
+                href="/projects"
+                aria-label={params.slug.replaceAll("-", " ")}
+                aria-current={
+                  pathname === `/projects/${params.slug}` ? "page" : undefined
+                }
+              >
+                {params.slug.replaceAll("-", " ")}
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

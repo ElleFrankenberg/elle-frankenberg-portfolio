@@ -4,7 +4,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 const ScrollToTopBtn = ({ handleScrollToTop, showOnLargeScreen }) => {
   return (
     <button
-      className={`cursor-pointer text-darkGray transition-colors lg:hover:text-darkBlue ${
+      className={`cursor-pointer text-mediumGray transition-colors lg:hover:text-darkBlue ${
         showOnLargeScreen === false ? "lg:sr-only" : ""
       }`}
       aria-label="Scroll to top"

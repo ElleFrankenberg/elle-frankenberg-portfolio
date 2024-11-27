@@ -5,7 +5,7 @@ const Button = ({ isLink, children, href, label, isActive, ...props }) => {
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`${label} The link opens in a new tab`}
-        className="bg-darkGray text-white py-[0.3rem] pr-4 pl-2 rounded-full flex items-center  gap-1  transition-colors lg:hover:bg-darkBlue"
+        className="bg-mediumGray text-white py-[0.3rem] pr-4 pl-2 rounded-full flex items-center  gap-1  transition-colors lg:hover:bg-darkBlue"
         href={href}
       >
         {children}
@@ -17,7 +17,7 @@ const Button = ({ isLink, children, href, label, isActive, ...props }) => {
     <button
       aria-label={label}
       className={`group ${
-        isActive ? "bg-darkBlue" : "bg-darkGray"
+        isActive ? "bg-darkBlue" : "bg-mediumGray"
       } text-white py-[0.3rem] pr-4 pl-2 rounded-full flex items-center  gap-1 transition-colors lg:hover:bg-darkBlue w-full h-full`}
       {...props}
     >
