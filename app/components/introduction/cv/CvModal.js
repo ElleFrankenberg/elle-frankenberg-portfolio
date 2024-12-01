@@ -62,7 +62,7 @@ const CvModal = ({ cv }) => {
               <li>
                 <a
                   href="/Elle_Frankenberg_CV_en.pdf"
-                  download="Elle_Frankenberg_CV_eng.pdf"
+                  download="Elle_Frankenberg_CV_en.pdf"
                   className="group flex items-center lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
                 >
