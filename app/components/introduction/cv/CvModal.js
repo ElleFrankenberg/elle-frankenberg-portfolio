@@ -61,7 +61,7 @@ const CvModal = ({ cv }) => {
             <ul className="flex flex-col gap-sm order-2 md:flex-row">
               <li>
                 <a
-                  href="/Elle_Frankenberg_CV_eng.pdf"
+                  href="/Elle_Frankenberg_CV_en.pdf"
                   download="Elle_Frankenberg_CV_eng.pdf"
                   className="group flex items-center lg:hover:text-darkBlue transition-colors"
                   aria-label="Download CV in English"
